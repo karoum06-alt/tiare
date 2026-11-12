@@ -1,0 +1,1246 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Tiare Vermutería</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Tiare Vermutería, Donibane Plaza 4, Zarautz. Vermut, raciones y platos con sabores vascos, mexicanos y nicaragüenses.">
+<meta property="og:title" content="Tiare Vermutería · Zarautz">
+<meta property="og:description" content="Tres raíces, una mesa. Sabores vascos, mexicanos y nicaragüenses.">
+<meta property="og:image" content="img/barra-terciopelo-1400.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Hanken+Grotesk:wght@400;500;600&display=swap">
+<link rel="preload" as="image" href="img/pasillo-barra-720.webp" imagesrcset="img/pasillo-barra-720.webp 720w, img/pasillo-barra-1400.webp 1086w" imagesizes="100vw">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BarOrPub","name":"Tiare Vermutería","servesCuisine":["Basque","Mexican","Nicaraguan"],"telephone":"+34 747 42 18 94","address":{"@type":"PostalAddress","streetAddress":"Donibane Plaza 4","postalCode":"20800","addressLocality":"Zarautz","addressRegion":"Gipuzkoa","addressCountry":"ES"},"priceRange":"€€"}
+</script>
+
+<style>
+/* Layout: dark forest-green room, ivory "paper" for the carta, gold only for hairlines and prices.
+   Depth: photos live on tilted 3D cards (pointer on desktop, swipe/scroll on phones). Single committed dark look. */
+:root{
+  --forest:#102B22; --forest-2:#16382C; --night:#0A1511; --ivory:#F3EBDD; --gold:#C5A46D; --walnut:#6B4A2E; --amber:#B9772F;
+  --ink:#1B241F; --ink-soft:#4E5A52; --paper-line:#DCCFB8; --ivory-dim:rgba(243,235,221,.72); --line:rgba(197,164,109,.28);
+  --f-display:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
+  --f-text:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
+  --ease:cubic-bezier(.22,.61,.24,1); --spring:cubic-bezier(.34,1.4,.5,1);
+  --gut-l:max(20px, env(safe-area-inset-left,0px)); --gut-r:max(20px, env(safe-area-inset-right,0px));
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{overflow-x:clip;scroll-behavior:smooth;scroll-padding-top:72px;background:var(--night)}
+body{margin:0;background:var(--night);color:var(--ivory);font-family:var(--f-text);font-size:16px;line-height:1.55;overflow-x:clip;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--night)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1240px;margin-inline:auto;padding-left:var(--gut-l);padding-right:var(--gut-r)}
+.eyebrow{font:600 .72rem/1 var(--f-text);letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3,h4{font-family:var(--f-display);font-weight:400;text-wrap:balance;margin:0}
+p{margin:0}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.i18n-fade{transition:opacity .25s var(--ease)}
+body.switching .i18n-fade{opacity:0}
+.progress{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;height:2px;z-index:55;background:var(--gold);transform-origin:0 50%;transform:scaleX(var(--p,0))}
+
+/* ---------- header ---------- */
+.hdr{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;transition:background .4s var(--ease),border-color .4s var(--ease),transform .5s var(--ease);border-bottom:1px solid transparent}
+.hdr.solid{background:rgba(10,21,17,.94);border-color:var(--line)}
+.hdr.hide{transform:translateY(-100%)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{display:flex;align-items:baseline;gap:10px;text-decoration:none}
+.brand b{font:500 1.45rem/1 var(--f-display);letter-spacing:.14em}
+.brand span{font:500 .62rem/1 var(--f-text);letter-spacing:.3em;color:var(--gold);text-transform:uppercase}
+.nav{display:flex;gap:24px}
+.nav a{font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--ivory-dim);position:relative;padding-block:6px;transition:color .25s}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+.nav a:hover,.nav a.cur{color:var(--ivory)} .nav a:hover::after,.nav a.cur::after{transform:scaleX(1)}
+.hdr-r{display:flex;align-items:center;gap:14px}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px;position:relative}
+.lang button{position:relative;z-index:1;font:600 .7rem/1 var(--f-text);letter-spacing:.14em;padding:8px 10px;min-width:38px;color:var(--ivory-dim);transition:color .3s}
+.lang button[aria-pressed="true"]{color:var(--night)}
+.lang .pill{position:absolute;top:3px;bottom:3px;left:3px;width:38px;background:var(--gold);border-radius:999px;transition:transform .5s var(--spring),width .4s var(--ease)}
+.burger{display:none;width:44px;height:44px;align-items:center;justify-content:center}
+.burger i{display:block;width:22px;height:1px;background:var(--ivory);position:relative;transition:background .3s}
+.burger i::before,.burger i::after{content:"";position:absolute;left:0;width:22px;height:1px;background:var(--ivory);transition:transform .4s var(--ease)}
+.burger i::before{top:-7px} .burger i::after{top:7px}
+.menu-open .burger i{background:transparent}
+.menu-open .burger i::before{transform:translateY(7px) rotate(45deg)}
+.menu-open .burger i::after{transform:translateY(-7px) rotate(-45deg)}
+.drawer{position:fixed;inset:0;z-index:45;background:var(--forest);display:flex;flex-direction:column;justify-content:flex-end;padding:calc(96px + env(safe-area-inset-top,0px)) var(--gut-r) calc(36px + env(safe-area-inset-bottom,0px)) var(--gut-l);clip-path:circle(0% at calc(100% - 42px) 32px);transition:clip-path .7s var(--ease);visibility:hidden}
+.menu-open .drawer{clip-path:circle(150% at calc(100% - 42px) 32px);visibility:visible}
+.drawer nav{display:flex;flex-direction:column;gap:6px}
+.drawer nav a{font:400 clamp(2.1rem,9vw,3rem)/1.15 var(--f-display);text-decoration:none;opacity:0;transform:translateY(24px) rotateX(-40deg);transform-origin:50% 100%;transition:opacity .5s var(--ease),transform .6s var(--ease)}
+.menu-open .drawer nav a{opacity:1;transform:none}
+.menu-open .drawer nav a:nth-child(1){transition-delay:.15s}.menu-open .drawer nav a:nth-child(2){transition-delay:.2s}.menu-open .drawer nav a:nth-child(3){transition-delay:.25s}.menu-open .drawer nav a:nth-child(4){transition-delay:.3s}.menu-open .drawer nav a:nth-child(5){transition-delay:.35s}.menu-open .drawer nav a:nth-child(6){transition-delay:.4s}
+.drawer .d-foot{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.9rem;color:var(--ivory-dim)}
+.drawer .d-foot a{text-decoration:none;color:var(--gold)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:grid;grid-template-columns:minmax(0,1fr);align-items:end;overflow:hidden;isolation:isolate;--px:0;--py:0}
+.hero-bg{position:absolute;inset:-3%;z-index:-2;transform:translate3d(calc(var(--px)*-16px),calc(var(--py)*-12px + var(--sy,0px)),0);transition:transform .9s var(--ease)}
+.hero-bg .hs{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;opacity:0;transition:opacity 2.4s ease-in-out}
+.hero-bg .hs.on{opacity:1}
+.hero-dots{display:flex;gap:8px;align-items:center}
+.hero-dots button{width:28px;height:20px;display:flex;align-items:center;padding:0}
+.hero-dots button span{display:block;width:100%;height:2px;background:rgba(243,235,221,.3);overflow:hidden;border-radius:2px}
+.hero-dots button i{display:block;height:100%;background:var(--gold);transform:scaleX(0);transform-origin:left}
+.hero-dots button.done i{transform:scaleX(1)}
+.hero-dots button.on i{animation:fill var(--dur,5s) linear forwards}
+@keyframes fill{to{transform:scaleX(1)}}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(10,21,17,.55) 0%,rgba(10,21,17,.15) 35%,rgba(10,21,17,.7) 72%,rgba(10,21,17,.96) 100%)}
+.hero .wrap{width:100%;min-width:0;padding-block:120px 56px;display:grid;gap:28px;position:relative}
+.hero-mark{display:grid;gap:14px;position:relative;z-index:2}
+.hero h1{font-size:clamp(3.6rem,18.5vw,15rem);max-width:100%;line-height:.82;letter-spacing:.06em;font-weight:400;margin-left:-.04em;display:flex;perspective:600px}
+.hero h1 span{display:inline-block;animation:letter 1.2s var(--ease) both;transform-origin:50% 100%}
+.hero h1 span:nth-child(2){animation-delay:.07s}.hero h1 span:nth-child(3){animation-delay:.14s}.hero h1 span:nth-child(4){animation-delay:.21s}.hero h1 span:nth-child(5){animation-delay:.28s}
+@keyframes letter{from{opacity:0;transform:translateY(40%) rotateX(-70deg)}to{opacity:1;transform:none}}
+.hero .sub{display:flex;align-items:center;gap:16px;font:500 .8rem/1 var(--f-text);letter-spacing:.5em;text-transform:uppercase;color:var(--gold)}
+.hero .sub::after{content:"";height:1px;width:clamp(40px,10vw,120px);background:var(--gold);opacity:.6;transform-origin:left;animation:line 1.4s .5s var(--ease) both}
+@keyframes line{from{transform:scaleX(0)}}
+.hero-copy{display:grid;gap:10px;max-width:34ch;position:relative;z-index:2}
+.hero-copy .statement{font:italic 400 clamp(1.7rem,4.4vw,2.7rem)/1.1 var(--f-display)}
+.hero-copy .support{color:var(--ivory-dim);font-size:1.02rem}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+.btn{display:inline-flex;align-items:center;gap:12px;min-height:50px;padding:0 24px;border-radius:999px;font:600 .78rem/1 var(--f-text);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;position:relative;overflow:hidden;transition:color .35s var(--ease),border-color .35s,transform .25s var(--spring),translate .5s var(--spring)}
+.btn:active{transform:scale(.96)}
+.btn-gold{background:var(--gold);color:var(--night)}
+.btn-gold::before{content:"";position:absolute;inset:0;background:var(--ivory);transform:translateY(101%);transition:transform .45s var(--ease);z-index:0}
+.btn-gold:hover::before{transform:none}
+.btn > *{position:relative;z-index:1}
+.btn-line{border:1px solid rgba(243,235,221,.45);color:var(--ivory)}
+.btn-line:hover{border-color:var(--gold);color:var(--gold)}
+.btn svg{width:16px;height:16px;transition:transform .35s var(--ease)}
+.btn:hover svg{transform:translateX(3px)}
+.hero-meta{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;padding-top:22px;border-top:1px solid var(--line);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ivory-dim);position:relative;z-index:2}
+.hero-meta a{text-decoration:none}
+.hero-meta a:hover{color:var(--gold)}
+.in{animation:rise 1.1s var(--ease) both}
+.in.d1{animation-delay:.35s}.in.d2{animation-delay:.5s}.in.d3{animation-delay:.65s}.in.d4{animation-delay:.8s}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+/* floating 3D plate stack (desktop) */
+.stack{display:none;position:absolute;right:var(--gut-r);top:max(96px,12vh);width:clamp(300px,28vw,400px);aspect-ratio:4/5;perspective:1300px;z-index:1;pointer-events:none}
+.stack-in{position:absolute;inset:0;transform-style:preserve-3d;transform:rotateY(calc(-20deg + var(--px)*12deg)) rotateX(calc(10deg - var(--py)*10deg));transition:transform 1s var(--ease)}
+.st{position:absolute;border-radius:6px;overflow:hidden;box-shadow:0 40px 70px -20px rgba(0,0,0,.7),0 0 0 1px rgba(197,164,109,.25);animation:float 6s ease-in-out infinite alternate,stIn 1.4s var(--ease) both}
+.st img{width:100%;height:100%;object-fit:cover}
+.st span{position:absolute;left:12px;bottom:10px;font:italic 400 1rem/1 var(--f-display);color:var(--ivory);text-shadow:0 1px 8px rgba(0,0,0,.6)}
+.st1{width:62%;aspect-ratio:4/3;left:-6%;top:6%;transform:translateZ(-120px) rotateZ(-5deg);animation-delay:-2s,.3s}
+.st2{width:58%;aspect-ratio:1;right:-4%;top:30%;transform:translateZ(-40px) rotateZ(4deg);animation-delay:-4s,.45s}
+.st3{width:56%;aspect-ratio:3/4;left:14%;bottom:-6%;transform:translateZ(70px) rotateZ(-2deg);animation-delay:0s,.6s}
+@keyframes float{from{translate:0 -10px}to{translate:0 12px}}
+@keyframes stIn{from{opacity:0;translate:0 80px}}
+@media (min-width:1100px){.stack{display:block}.hero-copy{max-width:30ch}}
+
+/* ---------- ticker ---------- */
+.ticker{background:var(--forest);border-block:1px solid var(--line);overflow:hidden;padding-block:18px;white-space:nowrap}
+.ticker-track{display:inline-flex;gap:0;animation:tick 38s linear infinite}
+.ticker span{font:italic 400 clamp(1.3rem,3vw,2rem)/1 var(--f-display);color:var(--ivory);padding-inline:28px;display:inline-flex;align-items:center;gap:56px}
+.ticker span::after{content:"";width:8px;height:8px;border:1px solid var(--gold);transform:rotate(45deg)}
+@keyframes tick{to{transform:translateX(-50%)}}
+.ticker:hover .ticker-track{animation-play-state:paused}
+
+/* ---------- 3D coverflow ---------- */
+.flow{background:var(--night);padding-block:96px 88px;overflow:hidden}
+.flow-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:24px}
+.flow-head h2{font-size:clamp(2.6rem,6vw,4.6rem);line-height:.95;margin-top:16px}
+.flow-head h2 em{font-style:italic;color:var(--gold)}
+.flow-ctrl{display:flex;align-items:center;gap:14px}
+.flow-ctrl .count{font:500 .8rem/1 var(--f-text);letter-spacing:.16em;color:var(--ivory-dim);font-variant-numeric:tabular-nums;min-width:4.5em;text-align:center}
+.rbtn{width:52px;height:52px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;transition:border-color .3s,background .3s,transform .25s var(--spring)}
+.rbtn:hover{border-color:var(--gold);background:rgba(197,164,109,.08)}
+.rbtn:active{transform:scale(.92)}
+.rbtn svg{width:18px;height:18px}
+.flow-stage{position:relative;height:clamp(400px,62vw,560px);perspective:1400px;touch-action:pan-y;user-select:none;-webkit-user-select:none;cursor:grab}
+.flow-stage.drag{cursor:grabbing}
+.fc{position:absolute;left:50%;top:50%;width:clamp(230px,30vw,340px);aspect-ratio:3/4;border-radius:8px;overflow:hidden;transition:transform .9s var(--ease),opacity .6s var(--ease),filter .6s;will-change:transform;box-shadow:0 40px 80px -30px rgba(0,0,0,.85);background:var(--forest);filter:brightness(.55) saturate(.8);padding:0;text-align:left}
+.fc.on{filter:none}
+.fc img{width:100%;height:100%;object-fit:cover;pointer-events:none;transition:transform 1.4s var(--ease)}
+.fc::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(10,21,17,.92));pointer-events:none}
+.fc-cap{position:absolute;left:20px;right:20px;bottom:18px;z-index:1;display:grid;gap:6px;opacity:0;transform:translateY(10px);transition:opacity .5s .15s,transform .6s .15s var(--ease)}
+.fc.on .fc-cap{opacity:1;transform:none}
+.fc-cap small{font:600 .66rem/1 var(--f-text);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.fc-cap b{font:400 1.6rem/1.05 var(--f-display);color:var(--ivory)}
+.fc-cap span{display:flex;justify-content:space-between;align-items:center;gap:10px;font:600 .95rem/1 var(--f-text);color:var(--gold);font-variant-numeric:tabular-nums}
+.fc-cap span i{font:600 .66rem/1 var(--f-text);font-style:normal;letter-spacing:.16em;text-transform:uppercase;color:var(--ivory-dim)}
+.flow-reflect{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);margin-top:8px}
+
+/* ---------- carta ---------- */
+.carta{background:var(--ivory);color:var(--ink);padding-block:96px 104px;position:relative}
+.carta-head{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:end;margin-bottom:44px}
+.carta-head h2{font-size:clamp(3rem,8vw,6.2rem);line-height:.92;color:var(--forest)}
+.carta-head h2 em{font-style:italic;color:var(--walnut)}
+.carta-head p{color:var(--ink-soft);max-width:44ch;justify-self:end}
+.carta .eyebrow{color:var(--walnut)}
+.tabs-bar{position:sticky;top:calc(64px + env(safe-area-inset-top,0px));z-index:20;background:rgba(243,235,221,.94);-webkit-backdrop-filter:saturate(1.4) blur(10px);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--paper-line);margin-inline:calc(-1 * var(--gut-l)) calc(-1 * var(--gut-r));transition:top .5s var(--ease)}
+.hdr-hidden .tabs-bar{top:env(safe-area-inset-top,0px)}
+.tabs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:12px var(--gut-r) 12px var(--gut-l);scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scroll-padding-inline:var(--gut-l)}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;scroll-snap-align:start;display:inline-flex;align-items:center;gap:9px;height:46px;padding:0 14px 0 5px;border-radius:999px;border:1px solid var(--paper-line);background:#FBF7EF;font:600 .8rem/1 var(--f-text);letter-spacing:.04em;color:var(--ink);white-space:nowrap;transition:background .35s var(--ease),color .35s var(--ease),border-color .35s,transform .25s var(--spring),opacity .3s}
+.tab:active{transform:scale(.95)}
+.tab .ti{width:36px;height:36px;border-radius:50%;overflow:hidden;flex:0 0 36px;background:var(--forest)}
+.tab .ti img{width:100%;height:100%;object-fit:cover}
+.tab .ti.contain{background:#fff}.tab .ti.contain img{object-fit:contain;padding:3px}
+.tab .tc{font:600 .66rem/1 var(--f-text);min-width:20px;height:20px;padding:0 6px;border-radius:999px;display:grid;place-items:center;background:rgba(16,43,34,.08);color:var(--ink-soft);font-variant-numeric:tabular-nums;transition:background .35s,color .35s}
+.tab[aria-selected="true"]{background:var(--forest);border-color:var(--forest);color:var(--ivory)}
+.tab[aria-selected="true"] .tc{background:var(--gold);color:var(--night)}
+@media (hover:hover){.tab:hover{border-color:var(--forest)}}
+.tabs.searching .tab{opacity:.45}
+.tab.more{padding-left:14px;border-style:dashed}
+.mlist{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,360px),1fr));gap:14px}
+.mgroup{background:#FBF7EF;border:1px solid rgba(220,207,184,.7);border-radius:16px;padding:18px 20px 8px}
+.mgroup h4{margin:0 0 6px;font:600 .66rem/1 var(--f-text);letter-spacing:.2em;text-transform:uppercase;color:var(--walnut)}
+.mgroup ul{list-style:none;margin:0;padding:0}
+.mgroup li+li{border-top:1px solid var(--paper-line)}
+.mrow{width:100%;text-align:left;display:grid;gap:4px;padding:12px 0}
+.mrow-top{display:flex;align-items:baseline;gap:10px;min-width:0}
+.mrow .mname{font-size:1.08rem;min-width:0}
+.mrow .dots{flex:1 1 20px;min-width:14px;border-bottom:1px dotted rgba(27,36,31,.3);transform:translateY(-4px)}
+.mrow-p{font:600 .92rem/1 var(--f-text);color:var(--forest);font-variant-numeric:tabular-nums;white-space:nowrap}
+@media (hover:hover){.mrow:hover .mname{color:var(--walnut)}}
+@media (min-width:1100px){.tabs{flex-wrap:wrap;overflow:visible}}
+/* search */
+.msearch{position:relative;margin:0 0 6px;max-width:560px}
+.msearch input{width:100%;min-height:50px;border-radius:999px;border:1px solid var(--paper-line);background:#FBF7EF;padding:0 46px;font:400 1rem/1 var(--f-text);color:var(--ink);-webkit-appearance:none;appearance:none;transition:border-color .25s,box-shadow .25s}
+.msearch input:focus{outline:none;border-color:var(--forest);box-shadow:0 0 0 3px rgba(16,43,34,.12)}
+.msearch input::-webkit-search-cancel-button{display:none}
+.msearch > svg{position:absolute;left:17px;top:50%;width:17px;height:17px;transform:translateY(-50%);color:var(--walnut);pointer-events:none}
+.msearch button{position:absolute;right:5px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;display:grid;place-items:center;color:var(--ink-soft)}
+.msearch button svg{width:14px;height:14px}
+.msearch button[hidden]{display:none}
+/* panel: one category at a time */
+.mpanel{padding-top:34px;touch-action:pan-y}
+.mp-in{transition:opacity .22s var(--ease),transform .32s var(--ease)}
+.mp-in.out{opacity:0;transform:translateX(calc(var(--dir,1) * -28px))}
+.mp-h{display:flex;align-items:flex-end;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;margin-bottom:22px}
+.mp-h h3{font-size:clamp(2.1rem,5vw,3.2rem);line-height:1;color:var(--forest)}
+.mp-h h3 i{font-style:italic;color:var(--gold);margin-right:.35em;font-size:.65em}
+.mp-h p{color:var(--ink-soft);max-width:46ch;margin-top:8px}
+.mp-h .cnt{font:600 .7rem/1 var(--f-text);letter-spacing:.2em;text-transform:uppercase;color:var(--walnut);white-space:nowrap}
+.mgrid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:12px}
+.mi{min-width:0;animation:miIn .55s var(--ease) backwards;animation-delay:calc(var(--i,0) * 40ms)}
+@keyframes miIn{from{opacity:0;transform:translateY(14px)}}
+.mcard{width:100%;height:100%;display:grid;grid-template-columns:92px minmax(0,1fr);gap:16px;align-items:start;text-align:left;padding:12px;border-radius:16px;background:#FBF7EF;border:1px solid rgba(220,207,184,.7);transition:transform .35s var(--spring),box-shadow .35s var(--ease),border-color .3s}
+@media (hover:hover){.mcard:hover{transform:translateY(-3px);box-shadow:0 18px 30px -22px rgba(16,43,34,.55);border-color:var(--paper-line)}.mcard:hover .mth img{transform:scale(1.06)}}
+.mcard:active{transform:scale(.985)}
+.mth{width:92px;height:92px;border-radius:12px;overflow:hidden;background:var(--forest);display:block;position:relative}
+.mth img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+.mth.contain{background:#fff;border:1px solid rgba(220,207,184,.6)}
+.mth.contain img{object-fit:contain;padding:6px}
+.mth.mono{display:grid;place-items:center;background:linear-gradient(145deg,var(--forest),#0D2219);font:italic 400 2.3rem/1 var(--f-display);color:var(--gold)}
+.mbody{display:flex;flex-direction:column;gap:5px;min-width:0;align-self:stretch;padding-top:2px}
+.mcat{font:600 .62rem/1 var(--f-text);letter-spacing:.18em;text-transform:uppercase;color:var(--walnut)}
+.mname{font:500 1.18rem/1.15 var(--f-display);color:var(--forest)}
+.mdesc{font-size:.86rem;line-height:1.45;color:var(--ink-soft);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.mfoot{margin-top:auto;padding-top:6px;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.mprice{font:600 .95rem/1 var(--f-text);color:var(--forest);font-variant-numeric:tabular-nums;background:rgba(197,164,109,.22);padding:7px 10px;border-radius:999px;white-space:nowrap}
+.mal{display:inline-flex;align-items:center;gap:5px;font:500 .62rem/1 var(--f-text);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+.mal svg{width:12px;height:12px;flex:0 0 12px}
+.mempty{padding:40px 0;color:var(--ink-soft);text-align:center}
+.mp-nav{display:flex;justify-content:space-between;gap:12px;margin-top:28px;padding-top:20px;border-top:1px solid var(--paper-line)}
+.mp-nav button{display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:0 4px;font:400 1.1rem/1.1 var(--f-display);color:var(--forest);text-align:left}
+.mp-nav button:last-child{text-align:right;margin-left:auto}
+.mp-nav small{display:block;font:600 .6rem/1 var(--f-text);letter-spacing:.2em;text-transform:uppercase;color:var(--walnut);margin-bottom:5px}
+.mp-nav svg{width:18px;height:18px;flex:0 0 18px;transition:transform .35s var(--spring)}
+@media (hover:hover){.mp-nav button:first-child:hover svg{transform:translateX(-4px)}.mp-nav button:last-child:hover svg{transform:translateX(4px)}}
+.chip{display:inline-flex;align-items:center;gap:6px;font:500 .68rem/1 var(--f-text);letter-spacing:.08em;text-transform:uppercase;padding:6px 9px;border-radius:999px;border:1px solid var(--paper-line);color:var(--ink-soft);width:max-content;max-width:100%}
+.chip.al{border-color:transparent;background:var(--forest);color:var(--ivory)}
+.chip svg{width:12px;height:12px}
+.d-al{display:flex;flex-wrap:wrap;gap:6px}
+.drink-note{margin-top:20px;padding:18px 20px;border:1px dashed var(--paper-line);border-radius:14px;color:var(--ink-soft);display:flex;gap:14px;align-items:flex-start}
+.drink-note b{color:var(--forest);font-weight:600}
+/* dish sheet: centred card on desktop, bottom sheet on phones */
+.sheet{position:fixed;inset:0;z-index:85;display:grid;place-items:center;visibility:hidden;pointer-events:none;transition:visibility 0s .45s}
+.sheet.open{visibility:visible;pointer-events:auto;transition:none}
+.sheet-bg{position:absolute;inset:0;background:rgba(10,21,17,.6);opacity:0;transition:opacity .35s var(--ease)}
+.sheet.open .sheet-bg{opacity:1}
+.sheet-card{position:relative;width:min(560px,calc(100% - 32px));max-height:calc(100svh - 48px);overflow:auto;background:var(--ivory);color:var(--ink);border-radius:22px;box-shadow:0 40px 90px -30px rgba(0,0,0,.6);opacity:0;transform:translateY(24px) scale(.97);transition:opacity .3s var(--ease),transform .45s var(--spring);overscroll-behavior:contain}
+.sheet.open .sheet-card{opacity:1;transform:none}
+.sheet-img{margin:0;aspect-ratio:4/3;max-width:100%;background:var(--forest) center/cover;overflow:hidden}
+.sheet-img img{width:100%;height:100%;object-fit:cover}
+.sheet-img.contain{background:#fff}.sheet-img.contain img{object-fit:contain;padding:20px}
+.sheet-body{padding:22px 24px calc(24px + env(safe-area-inset-bottom,0px));display:grid;gap:10px}
+.sheet-body small{font:600 .64rem/1 var(--f-text);letter-spacing:.2em;text-transform:uppercase;color:var(--walnut)}
+.sheet-body h3{font-size:clamp(1.8rem,5vw,2.3rem);line-height:1.05;color:var(--forest)}
+.sheet-body p{color:var(--ink-soft)}
+.sheet-row{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:8px}
+.sheet-row .mprice{font-size:1.15rem;padding:10px 14px}
+.sheet-x{position:absolute;top:12px;right:12px;z-index:2;width:42px;height:42px;border-radius:50%;background:rgba(243,235,221,.92);display:grid;place-items:center;color:var(--forest);box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.sheet-x svg{width:16px;height:16px}
+.sheet-grab{display:none}
+@media (max-width:640px){
+  .sheet{place-items:end stretch}
+  .sheet-card{width:100%;border-radius:22px 22px 0 0;max-height:92svh;opacity:1;transform:translateY(105%);transition:transform .45s cubic-bezier(.2,.9,.25,1)}
+  .sheet.open .sheet-card{transform:translateY(var(--drag,0px))}
+  .sheet-grab{display:block;position:absolute;top:8px;left:50%;width:40px;height:4px;margin-left:-20px;border-radius:4px;background:rgba(243,235,221,.85);z-index:2}
+  .mcard{grid-template-columns:80px minmax(0,1fr);gap:13px;padding:10px}
+  .mth{width:80px;height:80px}
+  .mname{font-size:1.1rem}
+  .mpanel{padding-top:26px}
+}
+/* Glovo / delivery band */
+.deliver{margin-top:90px;background:var(--forest);color:var(--ivory);border-radius:22px;padding:clamp(28px,5vw,56px);display:grid;grid-template-columns:minmax(0,1.3fr) auto;gap:28px;align-items:center;position:relative;overflow:hidden}
+.deliver::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;border:1px solid var(--line);pointer-events:none}
+.deliver h2{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1;margin:12px 0;color:var(--ivory)}
+.deliver h2 em{font-style:italic;color:var(--gold)}
+.deliver p{color:var(--ivory-dim);max-width:44ch}
+.deliver .btn{position:relative;z-index:1}
+.deliver .thumbs{display:flex;margin-top:22px}
+.deliver .thumbs img{width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid var(--forest);margin-left:-10px;background:var(--night)}
+.deliver .thumbs img:first-child{margin-left:0}
+@media (max-width:760px){.deliver{grid-template-columns:1fr}.deliver .btn{justify-content:center}}
+.legend{margin-top:64px;padding-top:32px;border-top:1px solid var(--forest);display:grid;grid-template-columns:minmax(0,260px) 1fr;gap:28px}
+.legend h4{margin:0 0 8px;font:500 1.5rem/1.1 var(--f-display);color:var(--forest)}
+.legend p{color:var(--ink-soft);font-size:.9rem}
+.legend ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px 18px}
+.legend li{display:flex;align-items:center;gap:10px;font-size:.88rem;color:var(--ink)}
+.legend li span{width:28px;height:28px;flex:0 0 28px;border-radius:50%;border:1px solid var(--forest);display:grid;place-items:center;font:600 .62rem/1 var(--f-text);letter-spacing:.04em;color:var(--forest)}
+.swipe-hint{display:none;margin-top:14px;font-size:.78rem;color:var(--ink-soft);letter-spacing:.08em}
+
+/* ---------- raíces ---------- */
+.roots{background:var(--forest);padding-block:110px 120px;overflow:hidden}
+.roots-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px;align-items:start}
+.roots-title{grid-column:1/8}
+.roots-title h2{font-size:clamp(3rem,7.5vw,6rem);line-height:.95;margin-top:18px}
+.roots-title h2 em{color:var(--gold);font-style:italic}
+.roots-lead{grid-column:8/13;align-self:end;color:var(--ivory-dim);font-size:1.08rem;max-width:40ch}
+.roots-img1{grid-column:1/6;margin:64px 0 0;aspect-ratio:4/5;max-width:100%;overflow:hidden;border-radius:4px}
+.roots-img2{grid-column:9/13;margin:-40px 0 0;aspect-ratio:3/4;max-width:100%;overflow:hidden;border-radius:4px}
+.roots-img1 img,.roots-img2 img{width:100%;height:120%;margin-top:-10%;object-fit:cover;will-change:transform}
+.roots-list{grid-column:6/12;grid-row:3;margin-top:-120px;background:var(--night);padding:44px clamp(24px,4vw,52px);position:relative;z-index:2;display:grid;gap:0;border-radius:4px}
+.root{display:grid;grid-template-columns:auto 1fr;gap:6px 24px;padding-block:26px;border-bottom:1px solid var(--line)}
+.root:last-child{border-bottom:0;padding-bottom:0}.root:first-child{padding-top:0}
+.root .ord{font:italic 400 2.6rem/1 var(--f-display);color:var(--gold);grid-row:span 2;min-width:1.2em}
+.root h3{font-size:1.7rem;line-height:1.1}
+.root p{color:var(--ivory-dim);font-size:.96rem;max-width:44ch}
+
+/* ---------- vermut ---------- */
+.vermut{position:relative;background:var(--night);padding-block:120px;overflow:hidden}
+.vermut::before{content:"";position:absolute;inset:auto -10% -30% 30%;height:80%;background:radial-gradient(closest-side,rgba(185,119,47,.18),transparent);pointer-events:none}
+.v-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,6vw,90px);align-items:center;position:relative}
+.v-photo{position:relative;aspect-ratio:3/4;max-width:100%;border-radius:6px;transform:perspective(1100px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transform-style:preserve-3d;transition:transform .8s var(--ease)}
+.v-photo.tilting{transition:transform .12s linear}
+.v-photo .vi{position:absolute;inset:0;overflow:hidden;border-radius:6px}
+.v-photo img{width:100%;height:100%;object-fit:cover}
+.v-photo .tag{position:absolute;left:16px;bottom:16px;background:rgba(10,21,17,.82);padding:10px 14px;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);transform:translateZ(50px);border-radius:2px}
+.v-copy h2{font-size:clamp(3rem,7vw,5.6rem);line-height:.95;margin:18px 0 26px}
+.v-copy h2 em{font-style:italic;color:var(--amber)}
+.v-copy > p{color:var(--ivory-dim);max-width:42ch;font-size:1.06rem}
+.motto{margin-top:40px;display:grid;gap:4px;font:400 clamp(1.4rem,3vw,2rem)/1.2 var(--f-display)}
+.motto span{transition:transform 1s var(--ease),opacity 1s var(--ease)}
+.motto span:nth-child(2){padding-left:1.4em;transition-delay:.12s}.motto span:nth-child(3){padding-left:2.8em;color:var(--gold);font-style:italic;transition-delay:.24s}
+.js .motto.pre span{transform:translateX(-30px);opacity:.15}
+.v-small{margin-top:44px;display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:center;padding-top:28px;border-top:1px solid var(--line)}
+.v-small .thumb{aspect-ratio:1;max-width:100%;overflow:hidden;border-radius:50%;animation:spin 40s linear infinite}
+.v-small .thumb img{width:100%;height:100%;object-fit:cover;object-position:70% 60%;animation:spin 40s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.v-small p{color:var(--ivory-dim);font-size:.94rem}
+
+/* ---------- espacio ---------- */
+.space{background:var(--forest);padding-block:110px}
+.space-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:44px}
+.space-head h2{font-size:clamp(2.8rem,6.5vw,5rem);line-height:.95;margin-top:16px}
+.space-head p{color:var(--ivory-dim);max-width:38ch}
+.gallery{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:clamp(90px,11vw,150px);gap:14px}
+.g-item{position:relative;overflow:hidden;border-radius:4px;cursor:zoom-in;padding:0;background:var(--night);transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .8s var(--ease),clip-path 1.2s var(--ease)}
+.g-item.tilting{transition:transform .12s linear}
+.g-item img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease)}
+.g-item:hover img{transform:scale(1.06)}
+.g-item figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 16px 14px;background:linear-gradient(transparent,rgba(10,21,17,.85));font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;text-align:left;color:var(--ivory);opacity:0;transform:translateY(6px);transition:opacity .4s,transform .4s var(--ease)}
+.g-item:hover figcaption,.g-item:focus-visible figcaption{opacity:1;transform:none}
+@media (hover:none){.g-item figcaption{opacity:1;transform:none}}
+.g1{grid-column:1/6;grid-row:span 5}.g2{grid-column:6/10;grid-row:span 3}.g3{grid-column:10/13;grid-row:span 4}.g4{grid-column:6/10;grid-row:span 3}.g5{grid-column:10/13;grid-row:span 2}
+.reveal{clip-path:inset(0 0 0 0 round 4px);transition:clip-path 1.2s var(--ease),transform .8s var(--ease)}
+.js .reveal.pre{clip-path:inset(14% 6% 0 6% round 4px)}
+.lightbox{position:fixed;inset:0;z-index:80;background:rgba(10,21,17,.97);display:grid;grid-template-rows:auto 1fr auto;opacity:0;visibility:hidden;transition:opacity .4s var(--ease),visibility .4s;padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px)}
+.lightbox.open{opacity:1;visibility:visible}
+.lb-top{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ivory-dim)}
+.lb-top button{width:44px;height:44px;display:grid;place-items:center}
+.lb-stage{position:relative;display:grid;place-items:center;overflow:hidden;padding:0 16px;touch-action:pan-y;perspective:1200px}
+.lb-stage img{max-height:78svh;width:auto;max-width:100%;object-fit:contain;transition:opacity .35s var(--ease),transform .5s var(--ease)}
+.lb-stage img.swap{opacity:0;transform:rotateY(calc(var(--d,1) * 25deg)) scale(.94)}
+.lb-nav{display:flex;justify-content:center;gap:12px;padding:16px}
+.lb-nav svg,.lb-top svg{width:18px;height:18px}
+
+/* ---------- visita ---------- */
+.visit{background:var(--ivory);color:var(--ink);padding-block:110px 0}
+.visit-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(32px,6vw,80px);align-items:start}
+.visit h2{font-size:clamp(3rem,7vw,5.6rem);line-height:.95;color:var(--forest);margin-top:16px}
+.visit .eyebrow{color:var(--walnut)}
+.info{display:grid;gap:0;border-top:1px solid var(--forest)}
+.info-row{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:22px 0;border-bottom:1px solid var(--paper-line);align-items:baseline}
+.info-row dt{font:600 .7rem/1.4 var(--f-text);letter-spacing:.2em;text-transform:uppercase;color:var(--walnut)}
+.info-row dd{margin:0;font:400 1.35rem/1.3 var(--f-display);color:var(--forest);min-width:0}
+.info-row dd small{display:block;font:400 .9rem/1.5 var(--f-text);color:var(--ink-soft);margin-top:4px}
+.info-row a{text-decoration:none;border-bottom:1px solid var(--gold);transition:color .3s}
+.info-row a:hover{color:var(--walnut)}
+.copy-btn{margin-left:10px;font:600 .66rem/1 var(--f-text);letter-spacing:.14em;text-transform:uppercase;padding:7px 10px;border:1px solid var(--paper-line);border-radius:999px;color:var(--ink-soft);vertical-align:middle;transition:border-color .3s,color .3s}
+.copy-btn:hover{border-color:var(--forest);color:var(--forest)}
+.visit .ctas{margin-top:32px}
+.visit .btn-line{border-color:var(--forest);color:var(--forest)}
+.visit .btn-line:hover{background:var(--forest);color:var(--ivory)}
+.map-card{position:relative;aspect-ratio:4/5;max-width:100%;border-radius:6px;background:var(--forest);color:var(--ivory);text-decoration:none;display:block;transform:perspective(1100px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transform-style:preserve-3d;transition:transform .8s var(--ease),clip-path 1.2s var(--ease)}
+.map-card.tilting{transition:transform .12s linear}
+.map-card .mi{position:absolute;inset:0;overflow:hidden;border-radius:6px}
+.map-card img{width:100%;height:100%;object-fit:cover;opacity:.55;transition:transform 1.2s var(--ease),opacity .5s}
+.map-card:hover img{transform:scale(1.04);opacity:.45}
+.map-card .mc{position:absolute;inset:auto 0 0 0;padding:28px;display:grid;gap:8px;background:linear-gradient(transparent,rgba(10,21,17,.9) 40%);border-radius:0 0 6px 6px;transform:translateZ(40px)}
+.map-card .pin{font:italic 400 2rem/1.05 var(--f-display)}
+.map-card .go{display:inline-flex;gap:10px;align-items:center;font:600 .74rem/1 var(--f-text);letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.map-card .coords{position:absolute;top:22px;left:24px;right:24px;display:flex;justify-content:space-between;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);transform:translateZ(30px)}
+
+/* ---------- footer ---------- */
+.foot{background:var(--night);margin-top:110px;padding-block:72px calc(32px + env(safe-area-inset-bottom,0px));overflow:hidden}
+.foot-big{font:400 clamp(4.5rem,19vw,14rem)/.8 var(--f-display);letter-spacing:.06em;color:var(--forest);-webkit-text-stroke:1px rgba(197,164,109,.35);margin-bottom:48px;user-select:none;display:flex;perspective:500px}
+.foot-big span{display:inline-block;transition:transform .9s var(--ease),color .6s}
+.js .foot-big.pre span{transform:translateY(60%) rotateX(-80deg)}
+.foot-big span:nth-child(2){transition-delay:.06s}.foot-big span:nth-child(3){transition-delay:.12s}.foot-big span:nth-child(4){transition-delay:.18s}.foot-big span:nth-child(5){transition-delay:.24s}
+.foot-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;font-size:.92rem;color:var(--ivory-dim)}
+.foot-grid h5{margin:0 0 12px;font:600 .7rem/1 var(--f-text);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.foot-grid a{text-decoration:none}.foot-grid a:hover{color:var(--ivory)}
+.foot-grid ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.foot-bottom{margin-top:56px;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.78rem;color:rgba(243,235,221,.5)}
+
+.actbar{display:none}
+.toast{position:fixed;left:50%;bottom:calc(90px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--forest);color:var(--ivory);border:1px solid var(--gold);padding:10px 16px;border-radius:999px;font-size:.84rem;opacity:0;transition:opacity .3s,transform .3s var(--ease);z-index:90;pointer-events:none}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* ---------- scroll-driven motion (GPU, no JS; static where unsupported) ---------- */
+.gallery{perspective:1200px}
+.roots,.vermut,.space{content-visibility:auto;contain-intrinsic-size:auto 1100px}
+@media (prefers-reduced-motion:no-preference){
+ @supports (animation-timeline: view()){
+  .hero .wrap{animation:heroOut linear both;animation-timeline:scroll(root);animation-range:0 85vh}
+  @keyframes heroOut{to{translate:0 -14vh;opacity:0}}
+  .hero::after{animation:heroDim linear both;animation-timeline:scroll(root);animation-range:0 90vh}
+  @keyframes heroDim{to{background-color:rgba(10,21,17,.6)}}
+  .flow-stage{animation:stageIn linear both;animation-timeline:view();animation-range:entry 0% cover 40%}
+  @keyframes stageIn{from{rotate:x 32deg;translate:0 90px;opacity:0}}
+  @keyframes titleIn{from{clip-path:inset(-30% 100% -30% -5%);translate:-40px 0}to{clip-path:inset(-30% -10% -30% -5%)}}
+  @keyframes rowSlide{from{translate:0 18px;opacity:0}}
+  .g-item{animation:galIn linear both;animation-timeline:view();animation-range:entry 0% cover 35%}
+  @keyframes galIn{from{rotate:x 24deg;translate:0 70px;opacity:0}}
+  .roots-list .root{animation:rowSlide linear both;animation-timeline:view();animation-range:entry 0% cover 30%}
+  .v-photo{animation:vIn linear both;animation-timeline:view();animation-range:entry 0% cover 45%}
+  @keyframes vIn{from{rotate:y -22deg;translate:-40px 40px;opacity:.2}}
+  .visit h2,.space-head h2,.roots-title h2,.v-copy h2,.flow-head h2,.carta-head h2{animation:titleIn linear both;animation-timeline:view();animation-range:entry 0% cover 30%}
+ }
+}
+/* ---------- reserva (WhatsApp) ---------- */
+.book{background:var(--night);padding-block:110px;position:relative;overflow:hidden}
+.book::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 85% 20%,rgba(197,164,109,.10),transparent 70%);pointer-events:none}
+.book-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(32px,6vw,90px);align-items:start;position:relative}
+.book h2{font-size:clamp(3rem,7vw,5.6rem);line-height:.95;margin:16px 0 24px}
+.book h2 em{font-style:italic;color:var(--gold)}
+.book-lead{color:var(--ivory-dim);max-width:40ch;font-size:1.05rem}
+.book-steps{list-style:none;margin:36px 0 0;padding:0;display:grid;gap:18px;counter-reset:st}
+.book-steps li{display:grid;grid-template-columns:36px 1fr;gap:14px;align-items:baseline;color:var(--ivory-dim);font-size:.95rem;counter-increment:st}
+.book-steps li::before{content:counter(st);width:30px;height:30px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;font:italic 400 1rem/1 var(--f-display);color:var(--gold)}
+.wa-num{margin-top:32px;display:flex;align-items:center;gap:12px;font:400 1.5rem/1 var(--f-display);color:var(--ivory)}
+.wa-num svg{width:26px;height:26px;color:var(--gold)}
+.bform{background:var(--ivory);color:var(--ink);border-radius:12px;padding:clamp(22px,4vw,40px);display:grid;gap:22px;box-shadow:0 50px 90px -50px rgba(0,0,0,.8)}
+.bform h3{font-size:1.9rem;color:var(--forest)}
+.fld{display:grid;gap:8px;min-width:0}
+.fld > label,.fld > .lbl{font:600 .7rem/1 var(--f-text);letter-spacing:.18em;text-transform:uppercase;color:var(--walnut)}
+.fld input,.fld textarea{min-width:0;max-width:100%;display:block;font:400 1rem/1.4 var(--f-text);color:var(--ink);background:#FBF7EF;border:1px solid var(--paper-line);border-radius:8px;padding:13px 14px;min-height:50px;width:100%;transition:border-color .25s,box-shadow .25s;-webkit-appearance:none;appearance:none}
+.fld textarea{min-height:84px;resize:vertical}
+.fld input:focus,.fld textarea:focus{outline:none;border-color:var(--forest);box-shadow:0 0 0 3px rgba(16,43,34,.12)}
+.fld.bad input{border-color:#A3402B}
+.fld .err{font-size:.8rem;color:#A3402B;display:none}
+.fld.bad .err{display:block}
+.row2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.fld input[type=date],.fld input[type=time]{min-width:0;width:100%}
+.fld input::-webkit-date-and-time-value{text-align:left}
+.pax{display:flex;flex-wrap:wrap;gap:8px}
+.pax button{min-width:46px;height:46px;padding:0 12px;border-radius:999px;border:1px solid var(--paper-line);background:#FBF7EF;font:600 .95rem/1 var(--f-text);color:var(--ink);font-variant-numeric:tabular-nums;transition:background .25s,color .25s,border-color .25s,transform .2s var(--spring)}
+.pax button:active{transform:scale(.92)}
+.pax button[aria-pressed="true"]{background:var(--forest);border-color:var(--forest);color:var(--ivory)}
+.preview{background:#E7DED0;border-radius:10px;padding:16px;display:grid;gap:8px}
+.preview .lbl{font:600 .66rem/1 var(--f-text);letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
+.bubble{justify-self:end;max-width:92%;background:#D9FDD3;color:#111B21;border-radius:10px 10px 2px 10px;padding:10px 12px 8px;font:400 .9rem/1.45 var(--f-text);white-space:pre-wrap;word-break:break-word;box-shadow:0 1px 1px rgba(0,0,0,.08)}
+.wa-btn{display:flex;align-items:center;justify-content:center;gap:12px;min-height:56px;border-radius:999px;background:var(--forest);color:var(--ivory);text-decoration:none;font:600 .82rem/1 var(--f-text);letter-spacing:.16em;text-transform:uppercase;transition:background .3s,transform .25s var(--spring)}
+.wa-btn:hover{background:#1A4434}
+.wa-btn:active{transform:scale(.97)}
+.wa-btn svg{width:20px;height:20px;color:var(--gold)}
+.bform .note{font-size:.82rem;color:var(--ink-soft);text-align:center}
+@media (max-width:980px){.book-grid{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:640px){.book{padding-block:80px}.row2{grid-template-columns:1fr 1fr}}
+/* ---------- responsive ---------- */
+@media (max-width:980px){
+  .nav{display:none}.burger{display:flex}
+  .carta-head{grid-template-columns:1fr}.carta-head p{justify-self:start}
+  .roots-grid{grid-template-columns:repeat(6,1fr)}
+  .roots-title,.roots-lead{grid-column:1/-1}
+  .roots-img1{grid-column:1/5;margin-top:36px}
+  .roots-img2{grid-column:4/7;margin-top:-140px;position:relative;z-index:1;border:6px solid var(--forest);border-radius:8px}
+  .roots-list{grid-column:1/-1;grid-row:auto;margin-top:28px}
+  .v-grid,.visit-grid{grid-template-columns:1fr}
+  .v-photo{aspect-ratio:4/5}
+  .gallery{grid-template-columns:repeat(6,1fr);grid-auto-rows:clamp(70px,16vw,130px)}
+  .g1{grid-column:1/5;grid-row:span 5}.g2{grid-column:5/7;grid-row:span 3}.g3{grid-column:5/7;grid-row:span 2}.g4{grid-column:1/4;grid-row:span 3}.g5{grid-column:4/7;grid-row:span 3}
+  .legend{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .map-card{aspect-ratio:16/11}
+}
+@media (max-width:640px){
+  .hdr .wrap{height:58px}
+  html{scroll-padding-top:60px}
+  .tabs-bar{top:calc(58px + env(safe-area-inset-top,0px))}
+  .tabs{padding-block:10px}
+  .brand span{display:none}
+  .lang button{padding:8px 6px;min-width:31px;font-size:.66rem;letter-spacing:.08em}.lang .pill{width:31px}
+  .hdr-r{gap:6px}
+  .hero .wrap{padding-block:100px 40px;gap:22px}
+  .hero .sub{letter-spacing:.38em}
+  .ctas .btn{flex:1 1 auto;justify-content:center}
+  .hero-meta{font-size:.72rem}
+  .flow{padding-block:72px 64px}
+  .flow-stage{height:440px}
+  .fc{width:min(66vw,280px)}
+  .carta{padding-block:72px 80px}
+  .cat-intro{grid-template-columns:1fr}.cat-intro p{grid-column:1}.cat-intro .num{display:none}
+  .cat-photo{aspect-ratio:4/3}
+  .cards{gap:22px}
+  .c-img{aspect-ratio:4/3}
+  .d-name{font-size:1.28rem}
+  .swipe-hint{display:block}
+  .root{grid-template-columns:1fr}.root .ord{grid-row:auto;font-size:2rem}
+  .roots-list{padding:32px 22px;margin-inline:calc(-1 * var(--gut-l) + 8px) calc(-1 * var(--gut-r) + 8px)}
+  .info-row{grid-template-columns:1fr;gap:6px}
+  .foot-grid{grid-template-columns:1fr}
+  .actbar{display:grid;grid-template-columns:repeat(4,1fr);position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(10,21,17,.96);border-top:1px solid var(--line);padding:8px var(--gut-r) calc(8px + env(safe-area-inset-bottom,0px)) var(--gut-l);transform:translateY(110%);transition:transform .45s var(--ease)}
+  .actbar.show{transform:none}
+  .actbar a{display:flex;flex-direction:column;align-items:center;gap:5px;padding:6px 0;text-decoration:none;font:600 .64rem/1 var(--f-text);letter-spacing:.14em;text-transform:uppercase;color:var(--ivory-dim)}
+  .actbar a svg{width:20px;height:20px;color:var(--gold)}
+  .foot{padding-bottom:calc(100px + env(safe-area-inset-bottom,0px))}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .js .reveal.pre{clip-path:none}.js .motto.pre span,.js .foot-big.pre span{transform:none;opacity:1}
+}
+</style>
+
+<!-- ================= CONTENT DATA (edit here: dishes, prices, photos, allergens, translations) =================
+  price: number in euros, or null if not on the printed menu.
+  allergens: array of codes from "allergens" below, or null = not confirmed yet (shows "Consultar alérgenos").
+  img: base path of THAT dish photo (img/menu/<name>; files -240.webp and -720.webp), or none. fit:"contain" for product shots. featured: true = shown in the 3D carousel.
+-->
+<script type="application/json" id="tiare-data">
+{"info":{"phoneDisplay":"747 42 18 94","phoneTel":"+34747421894","address":"Donibane Plaza 4, 20800 Zarautz, Gipuzkoa","mapsUrl":"https://www.google.com/maps/search/?api=1&query=Tiare+Vermuter%C3%ADa%2C+Donibane+Plaza+4%2C+20800+Zarautz","hours":null,"whatsapp":"34747421894","glovo":"https://glovo.go.link/open?link_type=store&store_id=616316&adjust_t=s321jkn"},"allergens":[{"code":"gluten","abbr":"GL","es":"Gluten","eu":"Glutena","fr":"Gluten","en":"Gluten"},{"code":"crustaceos","abbr":"CR","es":"Crustáceos","eu":"Krustazeoak","fr":"Crustacés","en":"Crustaceans"},{"code":"huevo","abbr":"HU","es":"Huevo","eu":"Arrautza","fr":"Œufs","en":"Egg"},{"code":"pescado","abbr":"PE","es":"Pescado","eu":"Arraina","fr":"Poisson","en":"Fish"},{"code":"cacahuetes","abbr":"CA","es":"Cacahuetes","eu":"Kakahueteak","fr":"Arachides","en":"Peanuts"},{"code":"soja","abbr":"SO","es":"Soja","eu":"Soja","fr":"Soja","en":"Soya"},{"code":"lacteos","abbr":"LA","es":"Lácteos","eu":"Esnekiak","fr":"Lait","en":"Milk"},{"code":"frutos","abbr":"FC","es":"Frutos de cáscara","eu":"Fruitu lehorrak","fr":"Fruits à coque","en":"Tree nuts"},{"code":"apio","abbr":"AP","es":"Apio","eu":"Apioa","fr":"Céleri","en":"Celery"},{"code":"mostaza","abbr":"MO","es":"Mostaza","eu":"Ziapea","fr":"Moutarde","en":"Mustard"},{"code":"sesamo","abbr":"SE","es":"Sésamo","eu":"Sesamoa","fr":"Sésame","en":"Sesame"},{"code":"sulfitos","abbr":"SU","es":"Sulfitos","eu":"Sulfitoak","fr":"Sulfites","en":"Sulphites"},{"code":"altramuces","abbr":"AL","es":"Altramuces","eu":"Altramuzak","fr":"Lupin","en":"Lupin"},{"code":"moluscos","abbr":"ML","es":"Moluscos","eu":"Moluskuak","fr":"Mollusques","en":"Molluscs"}],"categories":[{"id":"raciones","name":{"es":"Raciones","eu":"Errazioak","fr":"Rations","en":"Small plates"},"intro":{"es":"Para compartir en la barra, con el vermut en la mano.","eu":"Barran partekatzeko, bermuta eskuan.","fr":"À partager au comptoir, un vermouth à la main.","en":"To share at the bar, vermouth in hand."},"items":[{"name":{"es":"Pollo crunchy","eu":"Oilasko crunchy","fr":"Poulet crunchy","en":"Crunchy chicken"},"desc":{"es":"Tiras de pollo crujiente con salsa de miel y mostaza.","eu":"Oilasko-zerrenda kurruskariak, ezti eta ziape saltsarekin.","fr":"Lanières de poulet croustillantes, sauce miel-moutarde.","en":"Crispy chicken strips with honey and mustard sauce."},"price":9.3,"allergens":null,"img":"img/menu/pollo-crunchy","w":720,"h":722,"lqip":"data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAAAQAgCdASoOAA4AA4BaJbACdAYvNqaMP9OYAP7ijY2/FqBOVvkp60rFtY9NBqSuRIfo9t1dOZFNBFLBD85vU0Xtoq3mcH2f6K68n0Bwr9+KTs6L4zOj/kE32XTqGXQ83cXSNFThT6tM7gT7fboQJv3yRhj096fKWweAAA==","featured":true,"flow":"img/flow/pollo.webp"},{"name":{"es":"Croquetas de jamón","eu":"Urdaiazpiko-kroketak","fr":"Croquettes de jambon","en":"Ham croquettes"},"desc":{"es":"Croquetas cremosas de jamón (7 uds).","eu":"Urdaiazpiko-kroketa krematsuak (7 ale).","fr":"Croquettes crémeuses au jambon (7 pièces).","en":"Creamy ham croquettes (7 pcs)."},"price":8,"allergens":null,"img":"img/menu/croquetas-jamon","w":720,"h":710,"lqip":"data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQAgCdASoOAA4AA4BaJQBOj+ADA0MP6cAAAP7zePwzksHI7KV318xnT/3fpd4LM1YlDd1K4U7rMlAht8iZNoY56t4baGBlBhmIGhg+XwAAAA==","featured":true,"flow":"img/flow/croquetas.webp"},{"name":{"es":"Croquetas de buey","eu":"Idi-kroketak","fr":"Croquettes de bœuf","en":"Beef croquettes"},"desc":{"es":"Croquetas cremosas de buey (7 uds).","eu":"Idi-kroketa krematsuak (7 ale).","fr":"Croquettes crémeuses de bœuf (7 pièces).","en":"Creamy beef croquettes (7 pcs)."},"price":8.5,"allergens":null,"group":"raciones","img":"img/menu/croquetas-buey","w":720,"h":718,"lqip":"data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoOAA4AA4BaJQBOj+AC+M5GCtBAAP72Cjh/62XkS8L/dEIBid7zAHTJMjrOt1yx+wyPfu4bi8XCRULAO6wEI8Y1pLMfYDeHkzwCRLmNYMAAAA=="},{"name":{"es":"Croquetas de pollo","eu":"Oilasko-kroketak","fr":"Croquettes de poulet","en":"Chicken croquettes"},"desc":{"es":"Sabrosas, crujientes y suaves (8 uds).","eu":"Gozoak, kurruskariak eta leunak (8 ale).","fr":"Savoureuses, croustillantes et fondantes (8 pièces).","en":"Tasty, crispy and soft (8 pcs)."},"price":7,"allergens":null,"img":"img/menu/croquetas-pollo","w":720,"h":740,"lqip":"data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAABQAgCdASoOAA4AA4BaJbACdAYvrt7f7bA811AA9r0hDk6jHdG1uHz/r+NOqMFp5D977XVleMhtER5cWjCfISvbAhAMcibGEhH81go9Ng37wxWG/HERnGclnK9f8wsCp/buWSfGuBKWx70tYtUJ9ITgAAA="},{"name":{"es":"Patatas bravas o alioli","eu":"Patatak, brava edo alioli","fr":"Pommes de terre bravas ou aïoli","en":"Patatas bravas or alioli"},"desc":{"es":"Patatas fritas con salsa brava o alioli.","eu":"Patata frijituak, brava saltsarekin edo aliolirekin.","fr":"Pommes de terre frites, sauce brava ou aïoli.","en":"Fried potatoes with brava sauce or alioli."},"price":8.3,"allergens":null,"group":"raciones","img":"img/menu/bravas","w":720,"h":718,"lqip":"data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAACQAgCdASoOAA4AA4BaJZgCdH8Agpi893bwAkEYAAD+9kaq0M4hr6+YXfvutiJppTwhGq2VvXr028Y6ig5u/AlWlTUcT13GDtN3fhxXcAHcINPQ90CMwAy6GkwNC1dhD9WVZI/JzmAAAA=="},{"name":{"es":"Boniato con sus salsas","eu":"Batata bere saltsekin","fr":"Patate douce et ses sauces","en":"Sweet potato fries"},"desc":{"es":"Boniato frito con salsas de la casa: kétchup, mayonesa y mostaza.","eu":"Batata frijitua etxeko saltsekin: ketchupa, maionesa eta ziapea.","fr":"Patate douce frite et sauces maison : ketchup, mayonnaise et moutarde.","en":"Fried sweet potato with house sauces: ketchup, mayonnaise and mustard."},"price":8,"allergens":null,"group":"raciones","img":"img/menu/boniato","w":720,"h":712,"lqip":"data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAABQAgCdASoOAA4AA4BaJQBOj+ADBx8DDINmbYAA/vfwen1pkbACwLA/cDhgrml8dju+eQ963YoTaVvOBK49uPt7qNujN9RuDdeUgNNnWJSYBimIeoDLZ66gqHQNr8uQAAA="},{"name":{"es":"Salchipapas","eu":"Salchipapas","fr":"Salchipapas","en":"Salchipapas"},"desc":{"es":"Salchicha con patatas, salsa tártara, mayonesa y queso.","eu":"Saltxitxa patatekin, saltsa tartaroa, maionesa eta gazta.","fr":"Saucisse et frites, sauce tartare, mayonnaise et fromage.","en":"Sausage with fries, tartar sauce, mayonnaise and cheese."},"price":9,"allergens":null,"group":"raciones","img":"img/menu/salchipapas","w":720,"h":718,"lqip":"data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAABwAgCdASoOAA4AA4BaJbACdH8IIABgWWlDHsZgAP73EDbU3PWaJeWnX5orlwPL+iDDWKZHt4hJd/w/CNIe3XtKhWM5VrF8hGHzDmyeCF4IsPGMu14wG8sogAA="},{"name":{"es":"Chili nuggets","eu":"Chili nuggets","fr":"Chili nuggets","en":"Chili nuggets"},"desc":{"es":"Nuggets de queso y jalapeño.","eu":"Gazta eta jalapeño nuggetak.","fr":"Nuggets au fromage et au jalapeño.","en":"Cheese and jalapeño nuggets."},"price":9,"allergens":null,"group":"raciones","img":"img/menu/chili-nuggets","w":720,"h":718,"lqip":"data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAQCdASoOAA4AA4BaJYgCdH8AGBJncIwA/u2ucSv+P1mAQ9OM6QWfoWwHwBuHu0u2urw6+106x9SOCAKx/kKNBdKK/EhtROPqXSAA"},{"name":{"es":"Alitas de pollo","eu":"Oilasko-hegaltxoak","fr":"Ailes de poulet","en":"Chicken wings"},"desc":{"es":"Alitas con nuestra salsa barbacoa (10 uds).","eu":"Hegaltxoak gure barbakoa-saltsarekin (10 ale).","fr":"Ailes de poulet, notre sauce barbecue (10 pièces).","en":"Chicken wings with our barbecue sauce (10 pcs)."},"price":10,"allergens":null,"group":"raciones","img":"img/menu/alitas","w":720,"h":716,"lqip":"data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAABQAgCdASoOAA4AA4BaJZgCdH8AGBb5kogNUQAA/ucqJ9avnPOb5XG1cS5yQtpQnnuCfftmOGSO+YJfKAshq4nVLg78xUyGz4lU/kt6+KYgAAAA"},{"name":{"es":"Torreznos","eu":"Torreznoak","fr":"Torreznos","en":"Torreznos"},"desc":{"es":"Torreznos crujientes.","eu":"Torrezno kurruskariak.","fr":"Torreznos croustillants (poitrine de porc frite).","en":"Crispy pork belly (torreznos)."},"price":10,"allergens":null,"group":"raciones","img":"img/menu/torreznos","w":720,"h":708,"lqip":"data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADQAQCdASoOAA4AA4BaJagCdAD0s/ioAAD+8lGegXpn02DwzRVHbSwlo5TjSwTqPjQ33y00sy36wYxYn9GYJfez+tB9pPZ5pWb+pQ2MQWPhcvM4NFX/7K7tfC5/aGQL8NIa5AAA"},{"name":{"es":"Verduras en tempura","eu":"Barazkiak tenpuran","fr":"Légumes en tempura","en":"Vegetable tempura"},"desc":{"es":"Verduras de temporada en tempura: berenjena, alcachofa, zanahoria y calabacín.","eu":"Sasoiko barazkiak tenpuran: berenjena, orburua, azenarioa eta kalabazina.","fr":"Légumes de saison en tempura : aubergine, artichaut, carotte et courgette.","en":"Seasonal vegetables in tempura: aubergine, artichoke, carrot and courgette."},"price":10,"allergens":null,"group":"raciones","img":"img/menu/tempura","w":720,"h":718,"lqip":"data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAQAgCdASoOAA4AA4BaJaACdAEK6HwRIb2QAP7wQLkaf8SR2GV2yNmpYuhpcrEuR4bf6NOHgCrdZv6TFOCI4kJhHGbpg0NASqJd4mpMRfizuBvS1sjO4AAA"},{"name":{"es":"Rabas","eu":"Rabak","fr":"Rabas","en":"Rabas"},"desc":{"es":"Rabas de calamar crujientes.","eu":"Kalamar-raba kurruskariak.","fr":"Rabas de calmar croustillantes.","en":"Crispy squid strips."},"price":13,"allergens":null,"img":"img/menu/rabas","w":720,"h":706,"lqip":"data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABQAgCdASoOAA4AA4BaJQBOj+AQU5f6E8e64AAA/viy/9AstSCVaDS7ekY3BLiYWTlQLDMtU2A4A/iJNMjA2+iaM089qEweuMOnDq+F3yuH6vKayAAAAA=="},{"name":{"es":"Calamares","eu":"Kalamarrak","fr":"Calamars frits","en":"Fried calamari"},"desc":{"es":"Anillas de calamar crujientes.","eu":"Kalamar-eraztun kurruskariak.","fr":"Anneaux de calmar croustillants.","en":"Crispy squid rings."},"price":13,"allergens":null,"img":"img/menu/calamares","w":720,"h":709,"lqip":"data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABQAgCdASoOAA4AA4BaJZgCdH8IIAIGYTX1aAAA/vHgTmvZJ9NfYc27rUTt/mHpnHi9BCmLbAvjc+iWRhdKNUE5nFGKoWwc3iNwjmQMzPO1IutoiZDRM5jKvApAAA=="},{"name":{"es":"Torreznos de pulpo","eu":"Olagarro-torreznoak","fr":"Torreznos de poulpe","en":"Octopus torreznos"},"desc":{"es":"Pulpo crujiente estilo torrezno.","eu":"Olagarro kurruskaria, torrezno erara.","fr":"Poulpe croustillant façon torrezno.","en":"Crispy octopus, torrezno style."},"price":12,"allergens":null,"img":"img/menu/torreznos-pulpo","w":720,"h":708,"lqip":"data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAABQAgCdASoOAA4AA4BaJQBOj+ADA4tQhAolfAAA/vcO/dC1LACPMQGOqnVLIixwGmgSrSKnBWhHkqSycoDFs9vj7BIxnG2oNaAAAA=="},{"name":{"es":"Gambas a la plancha","eu":"Ganbak plantxan","fr":"Crevettes à la plancha","en":"Grilled prawns"},"desc":{"es":"Gambas a la plancha con sal y aceite de oliva.","eu":"Ganbak plantxan, gatzarekin eta oliba-olioarekin.","fr":"Crevettes à la plancha, sel et huile d'olive.","en":"Grilled prawns with salt and olive oil."},"price":15,"allergens":null,"img":"img/menu/gambas","w":720,"h":710,"lqip":"data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAABQAgCdASoOAA4AA4BaJaACdAYvNWeshloj8wAA/u41qurXbqvB989Qw5YFMrntMBzhRGDSSsfkDNX0+EpPhsihypx9ELKNFNUl5EASIPCqwJe55WxzXtJBTODbb7FiY38Opa8yE5OGPa3sG2Gv1xgAAAA=","featured":true,"flow":"img/flow/gambas.webp"},{"name":{"es":"Jamón ibérico","eu":"Urdaiazpiko iberikoa","fr":"Jambon ibérique","en":"Iberian ham"},"desc":{"es":"Jamón ibérico de bellota.","eu":"Ezkur-urdaiazpiko iberikoa.","fr":"Jambon ibérique de bellota.","en":"Acorn-fed Iberian ham."},"price":17,"allergens":null,"img":"img/menu/jamon","w":720,"h":554,"lqip":"data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQAgCdASoOAAsAA4BaJYgCdADbK6lcrfQAAP7tYPhi4mpgfk94r/fRKD+tFiby4rCpVP07+dHEoXdcV5iXLnzy697ss33ifstMgAAA"}]},{"id":"platos","name":{"es":"Platos","eu":"Platerak","fr":"Plats","en":"Mains"},"intro":{"es":"Maíz, chipotle y tomatillo verde. Aquí viven México y Nicaragua.","eu":"Artoa, chipotlea eta tomatillo berdea. Hemen bizi dira Mexiko eta Nikaragua.","fr":"Maïs, chipotle et tomatillo vert. Ici vivent le Mexique et le Nicaragua.","en":"Corn, chipotle and green tomatillo. This is where Mexico and Nicaragua live."},"items":[{"name":{"es":"Tacos mexicanos","eu":"Taco mexikarrak","fr":"Tacos mexicains","en":"Mexican tacos"},"desc":{"es":"Tortilla de maíz, cochinita pibil, chipotle, aguacate y cebolla morada encurtida.","eu":"Arto-tortilla, cochinita pibil, chipotlea, ahuakatea eta tipula gorri ozpinetakoa.","fr":"Tortilla de maïs, cochinita pibil, chipotle, avocat et oignon rouge mariné.","en":"Corn tortilla, cochinita pibil, chipotle, avocado and pickled red onion."},"price":12,"allergens":null,"img":"img/menu/tacos","w":720,"h":720,"lqip":"data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAABQAgCdASoOAA4AA4BaJYgCdIExGBiMR0ToeAAA/vN0Ufz/8KNmzX2/nlWJvuhLleZHgxd7O1PlJM2XqtvQIpO2EUliOqVrvaJQywoVwAA=","featured":true,"flow":"img/flow/tacos.webp"},{"name":{"es":"Nacho guacamole","eu":"Nacho guacamole","fr":"Nacho guacamole","en":"Guacamole nachos"},"desc":{"es":"Totopo de maíz, vinagreta de pimientos, salsa de tomatillo verde, guacamole, chipotle y jalapeños.","eu":"Arto-totopoa, piper-binagreta, tomatillo berdearen saltsa, guakamolea, chipotlea eta jalapeñoak.","fr":"Totopos de maïs, vinaigrette de poivrons, sauce tomatillo verte, guacamole, chipotle et jalapeños.","en":"Corn tortilla chips, pepper vinaigrette, green tomatillo sauce, guacamole, chipotle and jalapeños."},"price":9,"allergens":null,"img":"img/menu/nacho-guacamole","w":720,"h":712,"lqip":"data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAABQAgCdASoOAA4AA4BaJZgCdIDZGA8Gw/tfzgAA/u2ydDLWco371yuQbMNVAfxwZA1xbOrVdaZpHCGPwAhezvgSMXwiujd14EXGIIwIRgAAAA==","featured":true,"flow":"img/flow/nachos.webp"},{"name":{"es":"Nacho cielito lindo","eu":"Nacho cielito lindo","fr":"Nacho cielito lindo","en":"Cielito lindo nachos"},"desc":{"es":"Totopo de maíz, chili con carne, vinagreta de pimientos, salsa de tomatillo verde, chipotle y jalapeño.","eu":"Arto-totopoa, chili con carne, piper-binagreta, tomatillo berdearen saltsa, chipotlea eta jalapeñoa.","fr":"Totopos de maïs, chili con carne, vinaigrette de poivrons, sauce tomatillo verte, chipotle et jalapeño.","en":"Corn tortilla chips, chilli con carne, pepper vinaigrette, green tomatillo sauce, chipotle and jalapeño."},"price":11,"allergens":null,"img":"img/menu/cielito-lindo","w":720,"h":716,"lqip":"data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAABwAgCdASoOAA4AA4BaJYgCdIDZGLbs9QND5WAAAP73CSO52ksY+Iz1CUKrw5vl7eAl3L5CoAltZQa+93y61kCniwoqByg3cAHO2VAAGFWAAA=="},{"name":{"es":"Enchiladas","eu":"Enchiladak","fr":"Enchiladas","en":"Enchiladas"},"desc":{"es":"Salsa de tomatillo verde, guacamole, jalapeño, chipotle y carne mechada de cerdo.","eu":"Tomatillo berdearen saltsa, guakamolea, jalapeñoa, chipotlea eta txerri-haragi xehatua.","fr":"Sauce tomatillo verte, guacamole, jalapeño, chipotle et porc effiloché.","en":"Green tomatillo sauce, guacamole, jalapeño, chipotle and shredded pork."},"price":9,"allergens":null,"img":"img/menu/enchiladas","w":720,"h":714,"lqip":"data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAABwAgCdASoOAA4AA4BaJYgCdH8Agqy/t+Kdfo1AAP7nr2ec3ONcbCneZcPHx9Jmauv3wCbquxRMPlqMlb/zIUt0K37AgTsqk7YKtVQLXcAAAA=="},{"name":{"es":"Gringas de cochinita pibil","eu":"Cochinita pibil gringak","fr":"Gringas de cochinita pibil","en":"Cochinita pibil gringas"},"desc":{"es":"Tortilla de maíz, cochinita pibil y queso.","eu":"Arto-tortilla, cochinita pibil eta gazta.","fr":"Tortilla de maïs, cochinita pibil et fromage.","en":"Corn tortilla, cochinita pibil and cheese."},"price":12,"allergens":null,"img":"img/menu/gringa","w":720,"h":713,"lqip":"data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAABQAgCdASoOAA4AA4BaJYgCdIExGBiYmSVs6AAA/ugAbEJhFiCJcqSVHvwKunDdOvmONflOc8KRR3Ay2WK1tBaR0m9kS+tI25IRrYUPqp/OzkAAAAA="},{"name":{"es":"Bowl vegetal","eu":"Barazki-bowla","fr":"Bowl végétal","en":"Veggie bowl"},"desc":{"es":"Lechuga, queso crema, aguacate, tomate, maíz, zanahoria y berenjena.","eu":"Letxuga, krema-gazta, ahuakatea, tomatea, artoa, azenarioa eta berenjena.","fr":"Laitue, fromage frais, avocat, tomate, maïs, carotte et aubergine.","en":"Lettuce, cream cheese, avocado, tomato, sweetcorn, carrot and aubergine."},"price":13,"allergens":null,"img":"img/menu/bowl-vegetal","w":720,"h":712,"lqip":"data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAAAQAgCdASoOAA4AA4BaJYgCdAEPP1/JoigAAP7q83+PLA1UKaAiecuza7PhvXD866fklsbCOqnTCKegI3IosKP6BUUtEa+JbZRS2JAaw8AAxUfHFjIAAA=="},{"name":{"es":"Bowl de pollo","eu":"Oilasko-bowla","fr":"Bowl au poulet","en":"Chicken bowl"},"desc":{"es":"Base de arroz, lechuga, tomate, maíz, queso crema, aguacate y huevo duro.","eu":"Arroz-oinarria, letxuga, tomatea, artoa, krema-gazta, ahuakatea eta arrautza egosia.","fr":"Base de riz, laitue, tomate, maïs, fromage frais, avocat et œuf dur.","en":"Rice base, lettuce, tomato, sweetcorn, cream cheese, avocado and hard-boiled egg."},"price":13.5,"allergens":null,"img":"img/menu/chicken-bowl","w":720,"h":710,"lqip":"data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAAAwAgCdASoOAA4AA4BaJbACdADiVy4PX+/ugAD+mxgdSrEetfkv/r6LHK8u+w3EVTRkoaVopDF6iwtd2GjuLBIlNHJcPcfIL9yPjLn6hZj6PI4IasAajfigcUchB5o+uQxOU61ft/gKYyuul4Vi/2FFj5N3AAAA"},{"name":{"es":"Pastel de choclo","eu":"Pastel de choclo","fr":"Pastel de choclo","en":"Pastel de choclo"},"desc":{"es":"Pastel tradicional con maíz y carne.","eu":"Arto eta haragizko pastel tradizionala.","fr":"Gâteau traditionnel au maïs et à la viande.","en":"Traditional bake with corn and meat."},"price":10,"allergens":null,"img":"img/menu/pastel-choclo","w":720,"h":718,"lqip":"data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAQCdASoOAA4AA4BaJQBOgCHQTiOaDgD+9gdE+UnQPWv+gqmoBLRyrr6Yk2t4x3yyS5zE4YobHKa5SEwCh4v0a+dFGlEUAAA="},{"name":{"es":"Plato combinado nicaragüense","eu":"Nikaraguako plater konbinatua","fr":"Assiette nicaraguayenne","en":"Nicaraguan mixed plate"},"desc":{"es":"Carne asada de cerdo, gallo pinto, tostones y ensalada de repollo.","eu":"Txerri-haragi errea, gallo pinto, tostones eta aza-entsalada.","fr":"Porc grillé, gallo pinto, tostones et salade de chou.","en":"Roast pork, gallo pinto, tostones and cabbage salad."},"price":15,"allergens":null,"img":"img/menu/nicaraguense","w":720,"h":720,"lqip":"data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAwAgCdASoOAA4AA4BaJYwCdH8AGBFpvOVKAAD+9+3kN3BcjyRetLUoS3y14dcV5HU3uPwXMV/WTNZAvPI4Jw4QT5r5U2W5utiK1BGwhIAAAA=="}]},{"id":"ensaladas","name":{"es":"Ensaladas","eu":"Entsaladak","fr":"Salades","en":"Salads"},"intro":{"es":"Frescas, con producto del mar y de la huerta.","eu":"Freskoak, itsasoko eta baratzeko produktuarekin.","fr":"Fraîches, avec des produits de la mer et du potager.","en":"Fresh, with seafood and garden produce."},"items":[{"name":{"es":"Ensalada templada","eu":"Entsalada epela","fr":"Salade tiède","en":"Warm salad"},"desc":{"es":"Chipirones y langostinos, tomates cherry, cebolla caramelizada y sus salsas.","eu":"Txipiroiak eta otarrainxkak, gerezi-tomateak, tipula karamelizatua eta bere saltsak.","fr":"Petits calamars et gambas, tomates cerises, oignon caramélisé et ses sauces.","en":"Baby squid and king prawns, cherry tomatoes, caramelised onion and its sauces."},"price":13,"allergens":null,"img":"img/menu/ensalada-templada","w":720,"h":718,"lqip":"data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADQAQCdASoOAA4AA4BaJQBOgBS5q5/8AAD+lEYqMXVbq2Ze84f6AAG6sqG3P5k3woieo69GCTDNSMAwuimuMhv8DWf2k4I+4aNPwCZ8gAA="},{"name":{"es":"Ensalada de burrata","eu":"Burrata-entsalada","fr":"Salade de burrata","en":"Burrata salad"},"desc":{"es":"Burrata, lechuga, anchoa, pesto, tomates cherry, frutos secos y aliño de la casa.","eu":"Burrata, letxuga, antxoa, pestoa, gerezi-tomateak, fruitu lehorrak eta etxeko ongailua.","fr":"Burrata, laitue, anchois, pesto, tomates cerises, fruits secs et assaisonnement maison.","en":"Burrata, lettuce, anchovy, pesto, cherry tomatoes, nuts and house dressing."},"price":13,"allergens":null,"img":"img/menu/ensalada-burrata","w":720,"h":716,"lqip":"data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAABwAgCdASoOAA4AA4BaJZgCdAYvDqfpO9rudywgAOJ8MAkAh6zHPcTect0m78K3vtHsvEa9aFkUM8pls/tiAkDg1Iv9/2/Iog9q8wAYy5n0+G86P84i+ol4oyVFDnIeybSmAAAA"}]},{"id":"carnes","name":{"es":"Carnes y pescados","eu":"Haragiak eta arrainak","fr":"Viandes et poissons","en":"Meat and fish"},"intro":{"es":"Plancha, brasa lenta y producto del Cantábrico.","eu":"Plantxa, su motela eta itsasoko produktua.","fr":"Plancha, cuisson lente et produits de la mer.","en":"From the grill, slow-cooked, and produce from the Bay of Biscay."},"items":[{"name":{"es":"Pulpo a la plancha","eu":"Olagarroa plantxan","fr":"Poulpe à la plancha","en":"Grilled octopus"},"desc":{"es":"Con patatas y pimientos de padrón.","eu":"Patatekin eta Padroiko piperrekin.","fr":"Avec pommes de terre et piments de Padrón.","en":"With potatoes and Padrón peppers."},"price":21,"allergens":null,"img":"img/menu/pulpo","w":720,"h":714,"lqip":"data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAAAQAgCdASoOAA4AA4BaJZQCw7EOgjtfZ5QAAP73DpJepxmgaYYF3+kjdcFhnq30Mi3LbNtC+sn+OeVv0Nq1cBMzWoL8r1jSMdzh22kAAAA=","featured":true,"flow":"img/flow/pulpo.webp"},{"name":{"es":"Picaña","eu":"Pikaña","fr":"Picaña","en":"Picanha"},"desc":{"es":"Con patatas y ensalada (lechuga, tomate, rúcula y vinagre).","eu":"Patatekin eta entsaladarekin (letxuga, tomatea, errukula eta ozpina).","fr":"Avec pommes de terre et salade (laitue, tomate, roquette et vinaigre).","en":"With potatoes and salad (lettuce, tomato, rocket and vinegar)."},"price":15,"allergens":null,"img":"img/menu/picana","w":720,"h":714,"lqip":"data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABQAgCdASoOAA4AA4BaJYgCdAERH/O1WLwgOAAA/vN1ahXWZJ9TgJi/si7jSZDqTqsIrJG/GlYe3HPH2u+JK6L5KIBmgJvSi2rkAAAA","featured":true,"flow":"img/flow/picana.webp"},{"name":{"es":"Costilla a la barbacoa","eu":"Saiheskia barbakoan","fr":"Travers au barbecue","en":"Barbecue ribs"},"desc":{"es":"Cocinada a baja temperatura, con patatas y pimientos de padrón.","eu":"Tenperatura baxuan egina, patatekin eta Padroiko piperrekin.","fr":"Cuits à basse température, avec pommes de terre et piments de Padrón.","en":"Slow-cooked, with potatoes and Padrón peppers."},"price":15,"allergens":null,"img":"img/menu/costilla","w":720,"h":718,"lqip":"data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAwAgCdASoOAA4AA4BaJQBOj+ADMpS2hR49QAD+8K/ETQN2kAgn5ltC7IF+ukCcD0S9keQQKfj4OIqUQowoJFKkrPpzrblnfeybHgM2sOAx377nXWzWeBsdYpU7hFqL7epOVX6XYNpn/ObGonVssjzY9eAAAA==","featured":true,"flow":"img/flow/costilla.webp"},{"name":{"es":"Codillo de cerdo","eu":"Txerri-ukondoa","fr":"Jarret de porc","en":"Pork knuckle"},"desc":{"es":"Deshuesado, con patatas y pimientos de padrón.","eu":"Hezurgabea, patatekin eta Padroiko piperrekin.","fr":"Désossé, avec pommes de terre et piments de Padrón.","en":"Boneless, with potatoes and Padrón peppers."},"price":15,"allergens":null,"img":"img/menu/codillo","w":720,"h":716,"lqip":"data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAABwAgCdASoOAA4AA4BaJQBOkCYivf8VQTDURVwAAP738W4ER0cMceONz/qL/RogX/WkLCFJfBQ3xOVYyAcp8KLMyrU+Eqq3IUmEYFpROcfLSFzjAAA="},{"name":{"es":"Cachopo","eu":"Cachopoa","fr":"Cachopo","en":"Cachopo"},"desc":{"es":"Cachopo de ternera con jamón y queso.","eu":"Txahal-cachopoa, urdaiazpikoarekin eta gaztarekin.","fr":"Cachopo de veau au jambon et au fromage.","en":"Breaded beef cachopo with ham and cheese."},"price":15,"allergens":null,"img":"img/menu/cachopo","w":329,"h":329,"lqip":"data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAAAQAgCdASoOAA4AA4BaJaACdAEPhbByesyAAP7rJ1y5Bjl00yFzjuovy2ay/lROZgUByMEoyzVBfQIeibPeiRvyhtLSmrJV7za0gDAqxCuvRvBRQDrbJzS26JqXzYkAAAA="},{"name":{"es":"Merluza a la plancha","eu":"Legatza plantxan","fr":"Merlu à la plancha","en":"Grilled hake"},"desc":{"es":"Merluza fresca a la plancha.","eu":"Legatz freskoa plantxan.","fr":"Merlu frais à la plancha.","en":"Fresh hake from the grill."},"price":15,"allergens":null,"img":"img/menu/merluza","w":720,"h":474,"lqip":"data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACwAQCdASoOAAkAA4BaJQBdgBjvyd6GAP73PppKz7gF98VzQeP/lTzTFSKtTXGh6QTVvFtKhnrsg2YxIneSepjIAAA=","featured":true,"flow":"img/flow/merluza.webp"},{"name":{"es":"Chuletillas de cordero a la plancha","eu":"Bildots-txuletak plantxan","fr":"Côtelettes d'agneau à la plancha","en":"Grilled lamb chops"},"desc":{"es":"Tiernas y jugosas, con patatas y pimientos de padrón.","eu":"Samurrak eta mamitsuak, patatekin eta Padroiko piperrekin.","fr":"Tendres et juteuses, avec pommes de terre et piments de Padrón.","en":"Tender and juicy, with potatoes and Padrón peppers."},"price":15,"allergens":null,"img":"img/menu/chuletillas","w":720,"h":431,"lqip":"data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACwAQCdASoOAAgAA4BaJaACdACC2IEAAP6Gh1Eqw/TKrzZZIV/QERuYNUXCxIqIvv+IOHGnYcYXEaeCqfzvB0deRcYvJLIN0ob3/DdIHAA="}]},{"id":"hamburguesas","name":{"es":"Hamburguesas y bocadillos","eu":"Hanburgesak eta ogitartekoak","fr":"Burgers et sandwichs","en":"Burgers and sandwiches"},"intro":{"es":"La hamburguesa de la casa y pan bien cargado.","eu":"Etxeko hanburgesa eta ogi ondo betea.","fr":"Le burger maison et du pain bien garni.","en":"The house burger and well-filled bread."},"items":[{"name":{"es":"Hamburguesa Tiare","eu":"Tiare hanburgesa","fr":"Burger Tiare","en":"Tiare burger"},"desc":{"es":"Carne de vaca, queso, bacon, huevo, cebolla caramelizada, guacamole, lechuga y tomate.","eu":"Behi-haragia, gazta, hirugiharra, arrautza, tipula karamelizatua, guakamolea, letxuga eta tomatea.","fr":"Bœuf, fromage, bacon, œuf, oignon caramélisé, guacamole, laitue et tomate.","en":"Beef, cheese, bacon, egg, caramelised onion, guacamole, lettuce and tomato."},"price":14,"allergens":null,"img":"img/menu/hamburguesa","w":720,"h":716,"lqip":"data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQAQCdASoOAA4AA4BaJbACdADtigInEAD+eTbeZ92et9dAVBjFCK1zJr2KHwkoXsO6rBaEyDFcs4bWh/3Yyy1MJhwonjc7TZC5HeT9C0BXk1yHxY0GST8QMni3x+TQzVrIY4y6AAA="},{"name":{"es":"Bocadillo campero","eu":"Campero ogitartekoa","fr":"Bocadillo campero","en":"Country-style baguette"},"desc":{"es":"Pan de horno, lechuga, tomate, pollo marinado a la plancha, queso, cebolla caramelizada, guacamole y salsa de miel y mostaza.","eu":"Labeko ogia, letxuga, tomatea, oilasko ondua plantxan, gazta, tipula karamelizatua, guakamolea eta ezti eta ziape saltsa.","fr":"Pain cuit au four, laitue, tomate, poulet mariné à la plancha, fromage, oignon caramélisé, guacamole et sauce miel-moutarde.","en":"Oven-baked bread, lettuce, tomato, grilled marinated chicken, cheese, caramelised onion, guacamole and honey-mustard sauce."},"price":9.5,"allergens":null,"img":"img/menu/bocadillo","w":720,"h":637,"lqip":"data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAAAQAgCdASoOAAwAA4BaJYgCdAEO4sMErzMAAP7VFIlDuzWclRPSF6+PDIn2OYo9AAM1Q/vKEGQajnbpkVA4k9pb5DdJznaplN6fWAAA"},{"name":{"es":"Sándwich Tiare","eu":"Tiare sandwicha","fr":"Sandwich Tiare","en":"Tiare sandwich"},"desc":{"es":"Pan crujiente, lechuga, tomate, salsa de miel y mostaza, pollo crunchy, queso, cebolla caramelizada y aguacate.","eu":"Ogi kurruskaria, letxuga, tomatea, ezti eta ziape saltsa, oilasko crunchy, gazta, tipula karamelizatua eta ahuakatea.","fr":"Pain croustillant, laitue, tomate, sauce miel-moutarde, poulet crunchy, fromage, oignon caramélisé et avocat.","en":"Crusty bread, lettuce, tomato, honey-mustard sauce, crunchy chicken, cheese, caramelised onion and avocado."},"price":9.5,"allergens":null,"img":"img/menu/sandwich","w":720,"h":715,"lqip":"data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAwAgCdASoOAA4AA4BaJbACdAEfcAvWiueGgAD+sj1CQ0gNLfqDCMokizOOx1fReGSDLCTrlJEuvPRUSHyQuNQV5KATMdUG/SKtKLhfGkT0UK/F2dBGI/p08z/dVuk2o1ZhF84KSbwQAA==","featured":true,"flow":"img/flow/sandwich.webp"}]},{"id":"postres","name":{"es":"Postres","eu":"Postreak","fr":"Desserts","en":"Desserts"},"intro":{"es":"Para cerrar la sobremesa. El sorbete lleva txakoli.","eu":"Mahai-osteari amaiera emateko. Sorbeteak txakolina darama.","fr":"Pour finir en douceur. Le sorbet est au txakoli.","en":"To round off the meal. The sorbet is made with txakoli."},"items":[{"name":{"es":"Torrija","eu":"Torrija","fr":"Torrija (pain perdu)","en":"Torrija"},"desc":{"es":"Suave por dentro y crujiente por fuera, con caramelo y helado.","eu":"Barrutik leuna eta kanpotik kurruskaria, karamelu eta izozkiarekin.","fr":"Moelleuse à l'intérieur et croustillante à l'extérieur, avec caramel et glace.","en":"Soft inside and crisp outside, with caramel and ice cream."},"price":5,"allergens":null,"img":"img/menu/torrija","w":720,"h":715,"lqip":"data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADwAQCdASoOAA4AA4BaJbACdB2gARI7rgAA/vHejxbsqpQcj3wTDI/zS7K+hvXfELPmUv2vo4goFaPnpmAl0s6nOR3JKDEwQci1Q9v+d41glqUg2f5/3QaWY0UTebsAAAA="},{"name":{"es":"Coulant de chocolate","eu":"Txokolate-coulanta","fr":"Coulant au chocolat","en":"Chocolate coulant"},"desc":{"es":"Chocolate fundente con helado de vainilla.","eu":"Txokolate urtua bainila-izozkiarekin.","fr":"Chocolat fondant avec glace à la vanille.","en":"Molten chocolate with vanilla ice cream."},"price":4.8,"allergens":null,"img":"img/menu/coulant","w":720,"h":713,"lqip":"data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQAgCdASoOAA4AA4BaJQBOgB58YkjCGawgAP7z8T2+YDYL+tZw5TL1GfT7Q2KJp3o72oAwJxobYmdEF6YFu/xxOmzgLUwT4UML4OXEI9Pw5Lj1ecoodrU7mLPEIAAA"},{"name":{"es":"Tarta de manzana","eu":"Sagar-tarta","fr":"Tarte aux pommes","en":"Apple tart"},"desc":{"es":"Base fina de masa, crema pastelera, manzana asada y mermelada de albaricoque.","eu":"Ore-oinarri fina, krema, sagar errea eta abrikot-marmelada.","fr":"Fond de pâte fin, crème pâtissière, pommes rôties et confiture d'abricot.","en":"Thin pastry base, custard, roasted apple and apricot jam."},"price":4.8,"allergens":null,"img":"img/menu/tarta-manzana","w":720,"h":720,"lqip":"data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADwAQCdASoOAA4AA4BaJbACdAClWsINEIAA2/FHILrtoJ50utWsleNBzV9GXFWWHu20KekPITCeVwDLgMssw7pf9pfvki8KfSYB299PxmKrzXjvqHf+U7KfpVmQAA==","featured":true,"flow":"img/flow/tarta-manzana.webp"},{"name":{"es":"Tarta de cerezas","eu":"Gerezi-tarta","fr":"Tarte aux cerises","en":"Cherry tart"},"desc":{"es":"Frutos rojos y cerezas con crema pastelera sobre base fina de masa.","eu":"Fruitu gorriak eta gereziak, krema eta ore-oinarri finarekin.","fr":"Fruits rouges et cerises, crème pâtissière sur un fond de pâte fin.","en":"Red fruits and cherries with custard on a thin pastry base."},"price":4.8,"allergens":null,"img":"img/menu/tarta-cerezas","w":720,"h":769,"lqip":"data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAQAgCdASoNAA4AA4BaJYgCdBHABWtE5GuAAP7h8QrVEiOntAu59bZ23ZpLayN14h94QPOcVBm/W3X0LiDmR0y5a6sokwVimNuvKec0seu307s9D83TUmKsJ20jWA75EOr3gAAA"},{"name":{"es":"Natillas","eu":"Natillak","fr":"Natillas (crème aux œufs)","en":"Vanilla custard"},"desc":{"es":"Natillas de vainilla con canela.","eu":"Bainila-natillak kanelarekin.","fr":"Crème à la vanille et à la cannelle.","en":"Vanilla custard with cinnamon."},"price":3.5,"allergens":null,"img":"img/menu/natillas","w":720,"h":719,"lqip":"data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADwAQCdASoOAA4AA4BaJbACdAEQ13Trn0AA+UGNW8hAI2BoUpIA/OsNycTyLPrH7UllpFYufs5MHnRl36ySqR+fg5H2JKrxrlBKSspZgXlsAA=="},{"name":{"es":"Sorbete de mandarina al txakoli","eu":"Mandarina-sorbetea txakolinarekin","fr":"Sorbet mandarine au txakoli","en":"Mandarin sorbet with txakoli"},"desc":{"es":"Fresco y con guiño vasco: helado fino de mandarina con txakoli.","eu":"Freskoa eta euskal keinuarekin: mandarina-izozki fina txakolinarekin.","fr":"Frais, avec une touche basque : glace fine à la mandarine et au txakoli.","en":"Fresh, with a Basque touch: fine mandarin ice cream with txakoli."},"price":5,"allergens":null,"img":"img/menu/sorbete","w":720,"h":720,"lqip":"data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADwAQCdASoOAA4AA4BaJbACdAEKYJoy79AA/rOvC8WREw1LtIh/Xw/wL/GlmzN5Nfueuubms/TmPVLmWoNDbALny0q+yw3+6Anxtzhb4ZFQnNMQ8u8mPvB5byqt79o9wwAAAA=="}]},{"id":"refrescos","name":{"es":"Refrescos","eu":"Freskagarriak","fr":"Boissons fraîches","en":"Soft drinks"},"intro":{"es":"Latas bien frías.","eu":"Lata hotz-hotzak.","fr":"Canettes bien fraîches.","en":"Ice-cold cans."},"items":[{"name":{"es":"Coca-Cola","eu":"Coca-Cola","fr":"Coca-Cola","en":"Coca-Cola"},"desc":{"es":"Lata.","eu":"Lata.","fr":"Canette.","en":"Can."},"price":2,"allergens":null,"img":"img/menu/coca-cola","w":480,"h":640,"lqip":"data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAAAwAgCdASoKAA4AA4BaJbACdAEUVBfSsiMAAAD+9V8lo7SrlzZMxvNlslKMfh7r27LjpROb2+r3w9bnVy/Mo3h/xqZ6WoLE6IAAAA==","fit":"contain"},{"name":{"es":"7Up Zero","eu":"7Up Zero","fr":"7Up Zero","en":"7Up Zero"},"desc":{"es":"Sin azúcar.","eu":"Azukrerik gabe.","fr":"Sans sucre.","en":"Sugar free."},"price":2,"allergens":null,"img":"img/menu/7up","w":584,"h":742,"lqip":"data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAQAgCdASoLAA4AA4BaJaACw7Dc+CFViJYAAP7ubJpkxrdhbj4AvGN05qyvK/rDtNPVKLrPrLcy+4MlFpIFahOKO0biva1O4k7grw6IuPRa12ySmsKBbLho4woQtt2hIMJd3u6vhAgAAA==","fit":"contain"},{"name":{"es":"Nestea limón","eu":"Nestea limoia","fr":"Nestea citron","en":"Nestea lemon"},"desc":null,"price":2,"allergens":null,"img":"img/menu/nestea","w":720,"h":720,"lqip":"data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAACQAgCdASoOAA4AA4BaJbACdH8GJq2SWCjgrpTJUAD+9/FeW0NmFEa6u3iO1+0q5a6Zkm5rDi9EucWLT72LtRwCGSxfMbIwiaM8sfS2XGPhymlKhRMvzmm/YW3ivf8qwPcviwAA","fit":"contain"},{"name":{"es":"Aquarius limón","eu":"Aquarius limoia","fr":"Aquarius citron","en":"Aquarius lemon"},"desc":null,"price":2,"allergens":null,"img":"img/menu/aquarius-limon","w":720,"h":1053,"lqip":"data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoKAA4AA4BaJaACdADcy+vcgAD+4KY6xcOGaLnYNtDtWP4744b6uBcVGxqumIEdO1awVHN6nZnEr4tyOikm5IDYVC3DXgAA","fit":"contain"},{"name":{"es":"Aquarius naranja","eu":"Aquarius laranja","fr":"Aquarius orange","en":"Aquarius orange"},"desc":null,"price":2,"allergens":null,"img":"img/menu/aquarius-naranja","w":600,"h":600,"lqip":"data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAABwAgCdASoOAA4AA4BaJbACdDiABylmGhfeOimAAP71XtNaBQXRHBkWbvmiwnuHt+/zsFKT52je7eQXxh4RWrCwf6gHxJTJLYhKqUcAq4dshcP584xORBgDp9tG36asPKIPod4/NStkzNdMVSTkdUCCw24TVzFQUhAAAA==","fit":"contain"}]},{"id":"cervezas","name":{"es":"Cervezas","eu":"Garagardoak","fr":"Bières","en":"Beers"},"intro":{"es":"Para acompañar las raciones.","eu":"Errazioekin batera.","fr":"Pour accompagner les rations.","en":"To go with the small plates."},"items":[{"name":{"es":"Estrella Galicia","eu":"Estrella Galicia","fr":"Estrella Galicia","en":"Estrella Galicia"},"desc":null,"price":2,"allergens":null,"img":"img/menu/estrella-galicia","w":720,"h":1335,"lqip":"data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACwAQCdASoIAA4AA4BaJbAC7AD0gaOgAP0Dg1cs7Hb4y5iLtzQZpWO7loxK8zSK2mO5Mi2/B+Bjy1+4HYII8XvJLnG6xkQmOIlvwGAL6+3QaAAA","fit":"contain"},{"name":{"es":"Alhambra Especial","eu":"Alhambra Especial","fr":"Alhambra Especial","en":"Alhambra Especial"},"desc":{"es":"Lata.","eu":"Lata.","fr":"Canette.","en":"Can."},"price":2,"allergens":null,"img":"img/menu/alhambra","w":360,"h":360,"lqip":"data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAADQAQCdASoOAA4AA4BaJZwAAudQQJM8gAD++K4u3UAq26RDyJe2hCWs9ZB1mhlrYgAAAA==","fit":"contain"},{"name":{"es":"Estrella Galicia 0,0","eu":"Estrella Galicia 0,0","fr":"Estrella Galicia 0,0","en":"Estrella Galicia 0.0"},"desc":{"es":"Lager sin alcohol.","eu":"Alkoholik gabeko lager.","fr":"Lager sans alcool.","en":"Alcohol-free lager."},"price":2,"allergens":null,"img":"img/menu/estrella-00","w":720,"h":720,"lqip":"data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAAAwAgCdASoOAA4AA4BaJYwCdH8AE7EL2KbwAAD++Lpb+gU298wYeOUZjGkJlmAqPfn0Cg3p2LFvXkh+pjpJd/cRu/gAAA==","fit":"contain"},{"name":{"es":"Estrella 0,0 Tostada","eu":"Estrella 0,0 Tostada","fr":"Estrella 0,0 Tostada","en":"Estrella 0.0 Tostada"},"desc":{"es":"Tostada sin alcohol.","eu":"Alkoholik gabeko garagardo torradua.","fr":"Ambrée sans alcool.","en":"Alcohol-free amber beer."},"price":2.4,"allergens":null,"img":"img/menu/estrella-tostada","w":720,"h":720,"lqip":"data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAABQAgCdASoOAA4AA4BaJagCdH8IIABcCD4jRVAA/vi2cC2fOfKzhP6uYDpmN/7bs7LyYOzKxd4VnpFrggD9HYiDjE9wq+vDjFT44oAA","fit":"contain"},{"name":{"es":"Corona","eu":"Corona","fr":"Corona","en":"Corona"},"desc":null,"price":3,"allergens":null,"img":"img/menu/corona","w":720,"h":1323,"lqip":"data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACwAQCdASoIAA4AA4BaJZQAAxfk3dQAAP73XDPLwEBHNbd6GbGmu6QHEU6kFa+CdI0kYW17PbQFinQyQoJoiFkMcAeDZ1AS/sYUAAAA","fit":"contain"}],"note":{"es":"<b>Vermut, vinos y tónica:</b> los precios están en la pizarra de la barra. Pregunta al equipo.","eu":"<b>Bermuta, ardoak eta tonika:</b> prezioak barrako arbelean daude. Galdetu taldeari.","fr":"<b>Vermouth, vins et tonic :</b> les prix sont sur l'ardoise du comptoir. Demandez à l'équipe.","en":"<b>Vermouth, wine and tonic:</b> prices are on the board at the bar. Ask the team."}},{"id":"mas","list":true,"name":{"es":"Más de la carta","eu":"Kartako gainerakoa","fr":"Le reste de la carte","en":"More from the menu"},"intro":{"es":"Más platos de la carta.","eu":"Kartako plater gehiago.","fr":"D'autres plats de la carte.","en":"More dishes from the menu."},"items":[{"name":{"es":"Ceviche","eu":"Cevichea","fr":"Ceviche","en":"Ceviche"},"desc":{"es":"Corvina, gambas y pulpo.","eu":"Korbina, ganbak eta olagarroa.","fr":"Courbine, crevettes et poulpe.","en":"Croaker, prawns and octopus."},"price":13,"allergens":null,"group":"carnes"},{"name":{"es":"Tarta de whisky","eu":"Whisky-tarta","fr":"Gâteau au whisky","en":"Whisky cake"},"desc":null,"price":5,"allergens":null,"group":"postres"},{"name":{"es":"Tarta de frambuesa","eu":"Mugurdi-tarta","fr":"Tarte à la framboise","en":"Raspberry tart"},"desc":null,"price":4.5,"allergens":null,"group":"postres"}]}]}
+</script>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Tiare Vermutería"><b>TIARE</b><span>Vermutería</span></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#carta" data-t="nav.menu">Carta</a>
+      <a href="#raices" data-t="nav.story">Historia</a>
+      <a href="#vermut" data-t="nav.vermut">Vermut</a>
+      <a href="#espacio" data-t="nav.space">Espacio</a>
+      <a href="#reserva" data-t="nav.book">Reservar</a>
+      <a href="#visita" data-t="nav.visit">Visítanos</a>
+    </nav>
+    <div class="hdr-r">
+      <div class="lang" role="group" aria-label="Idioma / Hizkuntza / Langue / Language">
+        <span class="pill" aria-hidden="true"></span>
+        <button type="button" data-lang="es" aria-pressed="true" lang="es">ES</button>
+        <button type="button" data-lang="eu" aria-pressed="false" lang="eu">EU</button>
+        <button type="button" data-lang="fr" aria-pressed="false" lang="fr">FR</button>
+        <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+      </div>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="drawer"><i></i><span class="sr" data-t="nav.open">Abrir menú</span></button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <nav aria-label="Móvil">
+    <a href="#carta" data-t="nav.menu">Carta</a>
+    <a href="#raices" data-t="nav.story">Historia</a>
+    <a href="#vermut" data-t="nav.vermut">Vermut</a>
+    <a href="#espacio" data-t="nav.space">Espacio</a>
+    <a href="#reserva" data-t="nav.book">Reservar</a>
+    <a href="#visita" data-t="nav.visit">Visítanos</a>
+  </nav>
+  <div class="d-foot">
+    <span>Donibane Plaza 4 · Zarautz</span>
+    <a class="js-tel" href="tel:+34747421894">747 42 18 94</a>
+  </div>
+</div>
+
+<main id="top">
+  <section class="hero" id="hero" aria-label="Tiare Vermutería">
+    <div class="hero-bg" id="heroBg">
+      <img class="hs on" src="img/pasillo-barra-720.webp" srcset="img/pasillo-barra-720.webp 720w, img/pasillo-barra-1400.webp 1086w" sizes="100vw" alt="" fetchpriority="high" width="1086" height="1448" style="object-position:50% 62%">
+      <img class="hs" data-src="img/mesa-vermut-720.webp" data-srcset="img/mesa-vermut-720.webp 720w, img/mesa-vermut-1400.webp 1085w" sizes="100vw" alt="" width="1085" height="1450" style="object-position:50% 50%">
+      <img class="hs" data-src="img/barra-terciopelo-720.webp" data-srcset="img/barra-terciopelo-720.webp 720w, img/barra-terciopelo-1400.webp 1145w" sizes="100vw" alt="" width="1145" height="1374" style="object-position:30% 62%">
+      <img class="hs" data-src="img/grifos-barril-720.webp" data-srcset="img/grifos-barril-720.webp 720w, img/grifos-barril-1400.webp 1157w" sizes="100vw" alt="" width="1157" height="1360" style="object-position:50% 45%">
+    </div>
+    <div class="wrap">
+      <div class="stack" aria-hidden="true">
+        <div class="stack-in">
+          <div class="st st1"><img src="img/menu/tacos-720.webp" alt="" decoding="async"><span data-dish="Tacos mexicanos"></span></div>
+          <div class="st st2"><img src="img/menu/hamburguesa-720.webp" alt="" decoding="async"><span data-dish="Hamburguesa Tiare"></span></div>
+          <div class="st st3"><img src="img/vermut-720.webp" alt="" style="object-position:50% 45%"><span data-t="v.tag">Vermut de la casa</span></div>
+        </div>
+      </div>
+      <div class="hero-mark">
+        <h1 aria-label="TIARE"><span>T</span><span>I</span><span>A</span><span>R</span><span>E</span></h1>
+        <div class="sub in d1" data-t="hero.sub">Vermutería</div>
+      </div>
+      <div class="hero-copy">
+        <p class="statement in d2 i18n-fade" data-t="hero.statement">Tres raíces, una mesa.</p>
+        <p class="support in d2 i18n-fade" data-t="hero.support">Sabores vascos, mexicanos y nicaragüenses.</p>
+        <div class="ctas in d3">
+          <a class="btn btn-gold" href="#carta"><span data-t="hero.cta1">Ver la carta</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
+          <a class="btn btn-line" href="#reserva"><span data-t="hero.cta3">Reservar mesa</span></a>
+        </div>
+      </div>
+      <div class="hero-meta in d4">
+        <a href="#visita">Donibane Plaza 4 · Zarautz</a>
+        <div class="hero-dots" id="heroDots"><button type="button" class="on" aria-label="1 / 4"><span><i></i></span></button><button type="button" aria-label="2 / 4"><span><i></i></span></button><button type="button" aria-label="3 / 4"><span><i></i></span></button><button type="button" aria-label="4 / 4"><span><i></i></span></button></div>
+        <a class="js-tel" href="tel:+34747421894">747 42 18 94</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"></div></div>
+
+  <section class="flow" id="destacados" aria-labelledby="flow-h">
+    <div class="wrap">
+      <div class="flow-head">
+        <div>
+          <p class="eyebrow" data-t="flow.eyebrow">De la carta</p>
+          <h2 id="flow-h" data-t-html="flow.title">Mira antes<br><em>de pedir.</em></h2>
+        </div>
+        <div class="flow-ctrl">
+          <button type="button" class="rbtn" id="flowPrev" aria-label="Anterior" data-aria-t="ui.prev"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M10 3L5 8l5 5"/></svg></button>
+          <span class="count" id="flowCount" aria-live="polite">01 / 10</span>
+          <button type="button" class="rbtn" id="flowNext" aria-label="Siguiente" data-aria-t="ui.next"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <div class="flow-stage" id="flowStage" role="region" aria-roledescription="carrusel" aria-label="Platos de la carta"></div>
+    <div class="wrap"><div class="flow-reflect"></div></div>
+  </section>
+
+  <section class="carta" id="carta" aria-labelledby="carta-h">
+    <div class="wrap">
+      <div class="carta-head">
+        <div>
+          <p class="eyebrow" data-t="menu.eyebrow">La carta</p>
+          <h2 id="carta-h" style="margin-top:18px" data-t-html="menu.title">Buen vermut,<br><em>buena comida.</em></h2>
+        </div>
+        <p class="i18n-fade" data-t="menu.lead">Elige una sección y toca cualquier plato para verlo en grande.</p>
+      </div>
+      <div class="msearch"><label for="mSearch" class="sr" data-t="menu.search">Buscar en la carta</label><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="M13.5 13.5L18 18"/></svg><input id="mSearch" type="search" autocomplete="off" enterkeyhint="search" data-ph-t="menu.searchPh"><button type="button" id="mClear" hidden aria-label="Borrar" data-aria-t="menu.clear"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button></div>
+      <div class="tabs-bar">
+        <div class="tabs" id="tabs" role="tablist" aria-label="Carta"></div>
+      </div>
+      <div class="mpanel" id="mpanel" role="tabpanel" tabindex="-1"><div class="mp-in" id="mpIn"></div></div>
+      <aside class="legend" aria-labelledby="al-h">
+        <div>
+          <h4 id="al-h" data-t="al.title">Alérgenos</h4>
+          <p data-t="al.note">Los platos pueden contener trazas de otros alérgenos. Si tienes alguna alergia o intolerancia, consulta a nuestro personal.</p>
+        </div>
+        <ul id="alList"></ul>
+      </aside>
+    </div>
+  </section>
+
+  <section class="roots" id="raices" aria-labelledby="roots-h">
+    <div class="wrap roots-grid">
+      <div class="roots-title">
+        <p class="eyebrow" data-t="roots.eyebrow">La experiencia Tiare</p>
+        <h2 id="roots-h" data-t-html="roots.title">Tres raíces.<br><em>Una mesa.</em></h2>
+      </div>
+      <p class="roots-lead i18n-fade" data-t="roots.lead"></p>
+      <figure class="roots-img1 reveal pre">
+        <img data-par="0.12" src="img/pasillo-barra-720.webp" srcset="img/pasillo-barra-720.webp 720w, img/pasillo-barra-1400.webp 1086w" sizes="(max-width:980px) 66vw, 40vw" alt="" data-alt-t="alt.corridor" loading="lazy" width="1086" height="1448">
+      </figure>
+      <figure class="roots-img2 reveal pre">
+        <img data-par="-0.1" src="img/vermut-720.webp" srcset="img/vermut-720.webp 720w, img/vermut-1400.webp 1170w" sizes="(max-width:980px) 50vw, 30vw" alt="" data-alt-t="alt.vermut" loading="lazy" width="1170" height="1552">
+      </figure>
+      <div class="roots-list">
+        <article class="root"><span class="ord" aria-hidden="true">i</span><h3 data-t="roots.r1.t">Euskadi</h3><p class="i18n-fade" data-t="roots.r1.p"></p></article>
+        <article class="root"><span class="ord" aria-hidden="true">ii</span><h3 data-t="roots.r2.t">México</h3><p class="i18n-fade" data-t="roots.r2.p"></p></article>
+        <article class="root"><span class="ord" aria-hidden="true">iii</span><h3 data-t="roots.r3.t">Nicaragua</h3><p class="i18n-fade" data-t="roots.r3.p"></p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="vermut" id="vermut" aria-labelledby="v-h">
+    <div class="wrap v-grid">
+      <figure class="v-photo tiltable" style="margin:0">
+        <div class="vi"><img src="img/mesa-vermut-720.webp" srcset="img/mesa-vermut-720.webp 720w, img/mesa-vermut-1400.webp 1085w" sizes="(max-width:980px) 100vw, 50vw" alt="" data-alt-t="alt.table" loading="lazy" width="1085" height="1450"></div>
+        <span class="tag" data-t="v.tag">Vermut de la casa</span>
+      </figure>
+      <div class="v-copy">
+        <p class="eyebrow" data-t="v.eyebrow">El vermut</p>
+        <h2 id="v-h" data-t-html="v.title">La hora<br><em>del vermut.</em></h2>
+        <p class="i18n-fade" data-t="v.p"></p>
+        <p class="motto pre" id="motto" data-aria-t="v.motto">
+          <span data-t="v.m1">Buen vermut,</span>
+          <span data-t="v.m2">buena comida,</span>
+          <span data-t="v.m3">mejores momentos.</span>
+        </p>
+        <div class="v-small">
+          <div class="thumb"><img src="img/grifos-barril-720.webp" alt="" data-alt-t="alt.taps" loading="lazy" width="720" height="846"></div>
+          <p class="i18n-fade" data-t="v.small"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="space" id="espacio" aria-labelledby="s-h">
+    <div class="wrap">
+      <div class="space-head">
+        <div>
+          <p class="eyebrow" data-t="s.eyebrow">El espacio</p>
+          <h2 id="s-h" data-t="s.title">Madera, terciopelo y verde.</h2>
+        </div>
+        <p class="i18n-fade" data-t="s.p"></p>
+      </div>
+      <div class="gallery" id="gallery">
+        <button type="button" class="g-item g1 reveal pre tiltable" data-i="0"><img src="img/pasillo-barra-720.webp" srcset="img/pasillo-barra-720.webp 720w, img/pasillo-barra-1400.webp 1086w" sizes="(max-width:980px) 66vw, 42vw" alt="" loading="lazy" width="1086" height="1448"><figcaption data-t="g.0">La barra</figcaption></button>
+        <button type="button" class="g-item g2 reveal pre tiltable" data-i="1"><img src="img/barra-terciopelo-720.webp" alt="" loading="lazy" width="720" height="864" style="object-position:50% 70%"><figcaption data-t="g.1">Terciopelo verde</figcaption></button>
+        <button type="button" class="g-item g3 reveal pre tiltable" data-i="2"><img src="img/grifos-barril-720.webp" alt="" loading="lazy" width="720" height="846"><figcaption data-t="g.2">Grifos y barril</figcaption></button>
+        <button type="button" class="g-item g4 reveal pre tiltable" data-i="3"><img src="img/vermut-720.webp" alt="" loading="lazy" width="720" height="955"><figcaption data-t="g.3">El vermut</figcaption></button>
+        <button type="button" class="g-item g5 reveal pre tiltable" data-i="4"><img src="img/bowls-720.webp" alt="" loading="lazy" width="720" height="830"><figcaption data-t="g.4">En la mesa</figcaption></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="book" id="reserva" aria-labelledby="b-h">
+    <div class="wrap book-grid">
+      <div>
+        <p class="eyebrow" data-t="b.eyebrow">Reservas</p>
+        <h2 id="b-h" data-t-html="b.title">Reserva<br><em>tu mesa.</em></h2>
+        <p class="book-lead" data-t="b.lead">Elige día, hora y cuántos sois. Te abrimos WhatsApp con el mensaje ya escrito para el restaurante.</p>
+        <ol class="book-steps">
+          <li data-t="b.s1">Rellena el formulario.</li>
+          <li data-t="b.s2">Pulsa «Enviar por WhatsApp» y envía el mensaje.</li>
+          <li data-t="b.s3">Te confirmamos la reserva por WhatsApp.</li>
+        </ol>
+        <p class="wa-num"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></svg><span>747 42 18 94</span></p>
+      </div>
+      <form class="bform" id="bookForm" novalidate>
+        <h3 data-t="b.form">Datos de la reserva</h3>
+        <div class="fld" id="f-name"><label for="bName" data-t="b.name">Nombre</label><input id="bName" name="name" type="text" autocomplete="name" required><span class="err" data-t="b.req">Este campo es obligatorio.</span></div>
+        <div class="fld" id="f-pax"><span class="lbl" id="paxLbl" data-t="b.pax">Personas</span><div class="pax" role="group" aria-labelledby="paxLbl" id="paxBtns"></div></div>
+        <div class="row2">
+          <div class="fld" id="f-date"><label for="bDate" data-t="b.date">Día</label><input id="bDate" name="date" type="date" required><span class="err" data-t="b.req">Este campo es obligatorio.</span></div>
+          <div class="fld" id="f-time"><label for="bTime" data-t="b.time">Hora</label><input id="bTime" name="time" type="time" step="900" required><span class="err" data-t="b.req">Este campo es obligatorio.</span></div>
+        </div>
+        <div class="fld"><label for="bNotes" data-t="b.notes">Notas (opcional)</label><textarea id="bNotes" name="notes" rows="2" data-ph-t="b.notesPh"></textarea></div>
+        <a class="wa-btn" id="waBtn" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></svg><span data-t="b.send">Enviar por WhatsApp</span></a>
+        <p class="note" data-t="b.note">La reserva queda confirmada cuando el restaurante te responda.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="visit" id="visita" aria-labelledby="vi-h">
+    <div class="wrap visit-grid">
+      <div>
+        <p class="eyebrow" data-t="vi.eyebrow">Visítanos</p>
+        <h2 id="vi-h" data-t-html="vi.title">En la plaza<br>de Donibane.</h2>
+        <dl class="info" style="margin:36px 0 0">
+          <div class="info-row"><dt data-t="vi.addr">Dirección</dt><dd>Donibane Plaza 4<small>20800 Zarautz, Gipuzkoa</small></dd></div>
+          <div class="info-row"><dt data-t="vi.phone">Teléfono</dt><dd><a class="js-tel" href="tel:+34747421894">747 42 18 94</a><button type="button" class="copy-btn" id="copyPhone" data-t="vi.copy">Copiar</button></dd></div>
+          <div class="info-row"><dt data-t="vi.hours">Horario</dt><dd id="hoursDd"></dd></div>
+        </dl>
+        <div class="ctas">
+          <a class="btn btn-gold js-maps" href="#" target="_blank" rel="noopener"><span data-t="vi.dir">Cómo llegar</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a>
+          <a class="btn btn-line js-tel" href="tel:+34747421894"><span data-t="vi.call">Llamar</span></a>
+        </div>
+      </div>
+      <a class="map-card reveal pre tiltable js-maps" href="#" target="_blank" rel="noopener" aria-label="Google Maps">
+        <span class="mi"><img src="img/grifos-barril-720.webp" srcset="img/grifos-barril-720.webp 720w, img/grifos-barril-1400.webp 1157w" sizes="(max-width:980px) 100vw, 45vw" alt="" loading="lazy" width="1157" height="1360"></span>
+        <span class="coords"><span>Zarautz</span><span>Gipuzkoa</span></span>
+        <span class="mc">
+          <span class="pin">Donibane Plaza 4</span>
+          <span class="go"><span data-t="vi.open">Abrir en Google Maps</span> <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"/></svg></span>
+        </span>
+      </a>
+    </div>
+    <div class="wrap">
+      <aside class="deliver" id="domicilio" aria-labelledby="g-h">
+        <div>
+          <p class="eyebrow" data-t="g.eyebrow">A domicilio</p>
+          <h2 id="g-h" data-t-html="g.title">Tiare,<br><em>en tu casa.</em></h2>
+          <p data-t="g.p">Pide nuestros platos, postres y bebidas en Glovo y te los llevan a casa.</p>
+          <div class="thumbs" aria-hidden="true"><img src="img/menu/tacos-240.webp" alt="" loading="lazy"><img src="img/menu/hamburguesa-240.webp" alt="" loading="lazy"><img src="img/menu/nacho-guacamole-240.webp" alt="" loading="lazy"><img src="img/menu/torrija-240.webp" alt="" loading="lazy"></div>
+        </div>
+        <a class="btn btn-gold js-glovo" href="#" target="_blank" rel="noopener"><span data-t="g.btn">Pedir en Glovo</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"/></svg></a>
+      </aside>
+    </div>
+    <footer class="foot">
+      <div class="wrap">
+        <div class="foot-big pre" id="footBig" aria-hidden="true"><span>T</span><span>I</span><span>A</span><span>R</span><span>E</span></div>
+        <div class="foot-grid">
+          <div><h5>Tiare Vermutería</h5><p data-t="f.tag"></p></div>
+          <div><h5 data-t="vi.addr">Dirección</h5><p>Donibane Plaza 4<br>20800 Zarautz, Gipuzkoa</p></div>
+          <div><h5 data-t="vi.phone">Teléfono</h5><p><a class="js-tel" href="tel:+34747421894">747 42 18 94</a></p></div>
+          <div><h5 data-t="f.explore">Explora</h5><ul><li><a href="#carta" data-t="nav.menu">Carta</a></li><li><a href="#raices" data-t="nav.story">Historia</a></li><li><a href="#vermut" data-t="nav.vermut">Vermut</a></li><li><a href="#visita" data-t="nav.visit">Visítanos</a></li><li><a class="js-glovo" href="#" target="_blank" rel="noopener" data-t="g.btn">Pedir en Glovo</a></li></ul></div>
+        </div>
+        <div class="foot-bottom"><span>© <span id="yr">2026</span> Tiare Vermutería · Zarautz</span><span data-t="f.al"></span></div>
+      </div>
+    </footer>
+  </section>
+</main>
+
+<nav class="actbar" id="actbar" aria-label="Acciones rápidas">
+  <a href="#carta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M9 9h6M9 13h6"/></svg><span data-t="nav.menu">Carta</span></a>
+  <a href="#reserva"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></svg><span data-t="nav.bookShort">Reservar</span></a>
+  <a class="js-tel" href="tel:+34747421894"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M5 4h3l2 5-2 1.5a11 11 0 0 0 5.5 5.5L15 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span data-t="vi.call">Llamar</span></a>
+  <a class="js-maps" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span data-t="vi.dirShort">Llegar</span></a>
+</nav>
+
+<div class="lightbox" id="lb" role="dialog" aria-modal="true" aria-label="Galería">
+  <div class="lb-top"><span id="lbCap"></span><button type="button" id="lbClose" aria-label="Cerrar"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 3l10 10M13 3L3 13"/></svg></button></div>
+  <div class="lb-stage" id="lbStage"><img id="lbImg" alt=""></div>
+  <div class="lb-nav"><button type="button" class="rbtn" id="lbPrev" aria-label="Anterior"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M10 3L5 8l5 5"/></svg></button><button type="button" class="rbtn" id="lbNext" aria-label="Siguiente"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 3l5 5-5 5"/></svg></button></div>
+</div>
+<div class="sheet" id="sheet" aria-hidden="true">
+  <div class="sheet-bg" data-close></div>
+  <div class="sheet-card" role="dialog" aria-modal="true" aria-labelledby="shName" id="sheetCard">
+    <span class="sheet-grab" aria-hidden="true"></span>
+    <button type="button" class="sheet-x" data-close aria-label="Cerrar" data-aria-t="menu.close"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button>
+    <figure class="sheet-img" id="shFig"><img id="shImg" alt=""></figure>
+    <div class="sheet-body">
+      <small id="shCat"></small>
+      <h3 id="shName"></h3>
+      <p id="shDesc"></p>
+      <div class="d-al" id="shAl"></div>
+      <div class="sheet-row"><span class="mprice" id="shPrice"></span><a class="btn btn-gold js-glovo" href="#" target="_blank" rel="noopener"><span data-t="g.btn">Pedir en Glovo</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 12L12 4M6 4h6v6"/></svg></a></div>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+document.documentElement.classList.add('js');
+var DATA = JSON.parse(document.getElementById('tiare-data').textContent);
+var RM = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+var FINE = window.matchMedia && matchMedia('(hover:hover) and (pointer:fine)').matches;
+
+var T = {
+ es:{ "menu.lead":"Elige una sección y toca cualquier plato para verlo en grande.","menu.search":"Buscar en la carta","menu.searchPh":"Busca un plato: tacos, pulpo, coulant…","menu.clear":"Borrar búsqueda","menu.results":"Resultados","menu.none":"No hay platos con ese nombre. Prueba con otra palabra.","menu.prev":"Anterior","menu.close":"Cerrar","menu.askShort":"Alérgenos: consultar","g.eyebrow":"A domicilio","g.title":"Tiare,<br><em>en tu casa.</em>","g.p":"Pide nuestros platos, postres y bebidas en Glovo y te los llevan a casa.","g.btn":"Pedir en Glovo","nav.book":"Reservar","nav.bookShort":"Reservar","hero.cta3":"Reservar mesa","b.eyebrow":"Reservas","b.title":"Reserva<br><em>tu mesa.</em>","b.lead":"Elige día, hora y cuántos sois. Te abrimos WhatsApp con el mensaje ya escrito para el restaurante.","b.s1":"Rellena el formulario.","b.s2":"Pulsa «Enviar por WhatsApp» y envía el mensaje.","b.s3":"Te confirmamos la reserva por WhatsApp.","b.form":"Datos de la reserva","b.name":"Nombre","b.pax":"Personas","b.date":"Día","b.time":"Hora","b.notes":"Notas (opcional)","b.notesPh":"Terraza, trona, alergias, celebración…","b.preview":"Mensaje que se enviará","b.send":"Enviar por WhatsApp","b.note":"La reserva queda confirmada cuando el restaurante te responda.","b.req":"Este campo es obligatorio.","b.past":"Elige una fecha a partir de hoy.","b.fill":"Rellena tus datos y aquí verás el mensaje.","nav.menu":"Carta","nav.story":"Historia","nav.vermut":"Vermut","nav.space":"Espacio","nav.visit":"Visítanos","nav.open":"Abrir menú",
+  "hero.sub":"Vermutería","hero.statement":"Tres raíces, una mesa.","hero.support":"Sabores vascos, mexicanos y nicaragüenses.","hero.cta1":"Ver la carta","hero.cta2":"Descubre Tiare",
+  "ticker":["Buen vermut","Buena comida","Mejores momentos","Tres raíces, una mesa","Zarautz"],
+  "flow.eyebrow":"De la carta","flow.title":"Mira antes<br><em>de pedir.</em>","flow.see":"Ver en la carta","ui.prev":"Anterior","ui.next":"Siguiente",
+  "menu.eyebrow":"La carta","menu.title":"Buen vermut,<br><em>buena comida.</em>","menu.swipe":"Desliza a los lados para cambiar de sección.",
+  "menu.ask":"Consultar alérgenos","menu.askPrice":"Precio en barra","menu.dish":"plato","menu.dishes":"platos","menu.more":"También en la carta","menu.next":"Siguiente sección",
+  "al.title":"Alérgenos","al.note":"Los platos pueden contener trazas de otros alérgenos. Si tienes alguna alergia o intolerancia, consulta a nuestro personal.",
+  "roots.eyebrow":"La experiencia Tiare","roots.title":"Tres raíces.<br><em>Una mesa.</em>","roots.lead":"En la plaza de Donibane, en Zarautz, se sientan juntas tres cocinas. Lo que las une es la costumbre de compartir: un vermut, unas raciones y tiempo para alargar la tarde.",
+  "roots.r1.t":"Euskadi","roots.r1.p":"La barra, el producto y el vermut del mediodía. Rabas, gambas a la plancha y un sorbete de mandarina al txakoli.",
+  "roots.r2.t":"México","roots.r2.p":"Maíz, chipotle y tomatillo verde. Tacos de cochinita pibil, enchiladas, gringas y nachos para compartir.",
+  "roots.r3.t":"Nicaragua","roots.r3.p":"Cocina de casa: gallo pinto, tostones, ensalada de repollo y carne asada en el plato combinado nicaragüense.",
+  "v.eyebrow":"El vermut","v.title":"La hora<br><em>del vermut.</em>","v.p":"Vermut de barril servido en la barra, con hielo, piel de naranja y aceituna. Para empezar la tarde o alargar la sobremesa, con algo de picar al lado.","v.tag":"Vermut de la casa",
+  "v.m1":"Buen vermut,","v.m2":"buena comida,","v.m3":"mejores momentos.","v.motto":"Buen vermut, buena comida, mejores momentos.","v.small":"El barril de vermut y los grifos de cerveza, junto a la pizarra de la barra.",
+  "s.eyebrow":"El espacio","s.title":"Madera, terciopelo y verde.","s.p":"Una barra larga de madera, taburetes de terciopelo verde, plantas y luz cálida. Toca una foto para verla entera.",
+  "g.0":"La barra","g.1":"Terciopelo verde","g.2":"Grifos y barril","g.3":"El vermut","g.4":"En la mesa",
+  "vi.eyebrow":"Visítanos","vi.title":"En la plaza<br>de Donibane.","vi.addr":"Dirección","vi.phone":"Teléfono","vi.hours":"Horario","vi.copy":"Copiar","vi.copied":"Teléfono copiado","vi.dir":"Cómo llegar","vi.dirShort":"Llegar","vi.call":"Llamar","vi.open":"Abrir en Google Maps",
+  "vi.hoursMissing":"Llámanos para confirmar el horario","vi.hoursSmall":"Horario pendiente de publicar.",
+  "f.tag":"Tres raíces, una mesa. Sabores vascos, mexicanos y nicaragüenses.","f.explore":"Explora","f.al":"Información de alérgenos disponible en el local.",
+  "alt.corridor":"Barra de madera de Tiare con taburetes de terciopelo verde y lámparas de mimbre","alt.bowls":"Tres bowls servidos sobre una mesa de madera en Tiare","alt.vermut":"Dos copas de vermut con hielo, piel de naranja y aceitunas sobre la barra de Tiare","alt.taps":"Grifos de cerveza y barril de vermut en la barra","alt.table":"Dos vermuts con hielo y piel de naranja junto a una ración de pollo crujiente en una mesa de Tiare",
+  "meta.title":"Tiare Vermutería · Zarautz","meta.desc":"Tiare Vermutería, Donibane Plaza 4, Zarautz. Vermut, raciones y platos con sabores vascos, mexicanos y nicaragüenses."},
+ eu:{ "menu.lead":"Aukeratu atal bat eta ukitu edozein plater handian ikusteko.","menu.search":"Bilatu kartan","menu.searchPh":"Bilatu plater bat: takoak, olagarroa, coulanta…","menu.clear":"Ezabatu bilaketa","menu.results":"Emaitzak","menu.none":"Ez dago izen horretako platerik. Saiatu beste hitz batekin.","menu.prev":"Aurrekoa","menu.close":"Itxi","menu.askShort":"Alergenoak: galdetu","g.eyebrow":"Etxera","g.title":"Tiare,<br><em>zure etxean.</em>","g.p":"Eskatu gure platerak, postreak eta edariak Glovon eta etxera eramango dizkizute.","g.btn":"Eskatu Glovon","nav.book":"Erreserbatu","nav.bookShort":"Erreserba","hero.cta3":"Mahaia erreserbatu","b.eyebrow":"Erreserbak","b.title":"Erreserbatu<br><em>zure mahaia.</em>","b.lead":"Aukeratu eguna, ordua eta zenbat zareten. WhatsApp irekiko dizugu jatetxearentzako mezua idatzita.","b.s1":"Bete formularioa.","b.s2":"Sakatu «Bidali WhatsApp bidez» eta bidali mezua.","b.s3":"Erreserba WhatsApp bidez baieztatuko dizugu.","b.form":"Erreserbaren datuak","b.name":"Izena","b.pax":"Pertsonak","b.date":"Eguna","b.time":"Ordua","b.notes":"Oharrak (aukerakoa)","b.notesPh":"Terraza, haur-aulkia, alergiak, ospakizuna…","b.preview":"Bidaliko den mezua","b.send":"Bidali WhatsApp bidez","b.note":"Erreserba jatetxeak erantzuten dizunean baieztatzen da.","b.req":"Eremu hau derrigorrezkoa da.","b.past":"Aukeratu gaurtik aurrerako data bat.","b.fill":"Bete zure datuak eta hemen ikusiko duzu mezua.","nav.menu":"Karta","nav.story":"Historia","nav.vermut":"Bermuta","nav.space":"Gunea","nav.visit":"Bisitatu","nav.open":"Ireki menua",
+  "hero.sub":"Bermutegia","hero.statement":"Hiru sustrai, mahai bat.","hero.support":"Euskal, Mexikoko eta Nikaraguako zaporeak.","hero.cta1":"Ikusi karta","hero.cta2":"Ezagutu Tiare",
+  "ticker":["Bermut ona","Janari ona","Une hobeak","Hiru sustrai, mahai bat","Zarautz"],
+  "flow.eyebrow":"Kartatik","flow.title":"Begiratu<br><em>eskatu aurretik.</em>","flow.see":"Ikusi kartan","ui.prev":"Aurrekoa","ui.next":"Hurrengoa",
+  "menu.eyebrow":"Karta","menu.title":"Bermut ona,<br><em>janari ona.</em>","menu.swipe":"Irristatu alboetara atalez aldatzeko.",
+  "menu.ask":"Galdetu alergenoak","menu.askPrice":"Prezioa barran","menu.dish":"plater","menu.dishes":"plater","menu.more":"Kartan baita ere","menu.next":"Hurrengo atala",
+  "al.title":"Alergenoak","al.note":"Platerek beste alergeno batzuen arrastoak izan ditzakete. Alergiaren bat edo intolerantziaren bat baduzu, galdetu gure langileei.",
+  "roots.eyebrow":"Tiare esperientzia","roots.title":"Hiru sustrai.<br><em>Mahai bat.</em>","roots.lead":"Zarauzko Donibane plazan hiru sukalde esertzen dira elkarrekin. Partekatzeko ohiturak batzen ditu: bermut bat, errazio batzuk eta arratsaldea luzatzeko denbora.",
+  "roots.r1.t":"Euskadi","roots.r1.p":"Barra, produktua eta eguerdiko bermuta. Rabak, ganbak plantxan eta mandarina-sorbetea txakolinarekin.",
+  "roots.r2.t":"Mexiko","roots.r2.p":"Artoa, chipotlea eta tomatillo berdea. Cochinita pibil takoak, enchiladak, gringak eta partekatzeko nachoak.",
+  "roots.r3.t":"Nikaragua","roots.r3.p":"Etxeko sukaldaritza: gallo pinto, tostones, aza-entsalada eta haragi errea Nikaraguako plater konbinatuan.",
+  "v.eyebrow":"Bermuta","v.title":"Bermut<br><em>ordua.</em>","v.p":"Upeleko bermuta barran zerbitzatua, izotzarekin, laranja-azalarekin eta olibarekin. Arratsaldea hasteko edo mahai-ostea luzatzeko, zerbait mokatzeko ondoan.","v.tag":"Etxeko bermuta",
+  "v.m1":"Bermut ona,","v.m2":"janari ona,","v.m3":"une hobeak.","v.motto":"Bermut ona, janari ona, une hobeak.","v.small":"Bermut-upela eta garagardo-txorrotak, barrako arbelaren ondoan.",
+  "s.eyebrow":"Gunea","s.title":"Egurra, belusa eta berdea.","s.p":"Egurrezko barra luzea, belus berdezko aulki altuak, landareak eta argi epela. Ukitu argazki bat osorik ikusteko.",
+  "g.0":"Barra","g.1":"Belus berdea","g.2":"Txorrotak eta upela","g.3":"Bermuta","g.4":"Mahaian",
+  "vi.eyebrow":"Bisitatu","vi.title":"Donibane<br>plazan.","vi.addr":"Helbidea","vi.phone":"Telefonoa","vi.hours":"Ordutegia","vi.copy":"Kopiatu","vi.copied":"Telefonoa kopiatuta","vi.dir":"Nola iritsi","vi.dirShort":"Iritsi","vi.call":"Deitu","vi.open":"Ireki Google Mapsen",
+  "vi.hoursMissing":"Deitu ordutegia baieztatzeko","vi.hoursSmall":"Ordutegia argitaratzeke.",
+  "f.tag":"Hiru sustrai, mahai bat. Euskal, Mexikoko eta Nikaraguako zaporeak.","f.explore":"Arakatu","f.al":"Alergenoei buruzko informazioa lokalean eskuragarri.",
+  "alt.corridor":"Tiareko egurrezko barra, belus berdezko aulkiekin eta zumezko lanparekin","alt.bowls":"Hiru bowl egurrezko mahai batean Tiaren","alt.vermut":"Bi kopa bermut izotzarekin, laranja-azalarekin eta olibekin Tiareko barran","alt.taps":"Garagardo-txorrotak eta bermut-upela barran","alt.table":"Bi bermut izotzarekin eta laranja-azalarekin, oilasko kurruskari errazio baten ondoan Tiareko mahai batean",
+  "meta.title":"Tiare Bermutegia · Zarautz","meta.desc":"Tiare Bermutegia, Donibane Plaza 4, Zarautz. Bermuta, errazioak eta platerak euskal, Mexikoko eta Nikaraguako zaporeekin."},
+ fr:{ "menu.lead":"Choisissez une section et touchez un plat pour le voir en grand.","menu.search":"Rechercher dans la carte","menu.searchPh":"Cherchez un plat : tacos, poulpe, coulant…","menu.clear":"Effacer la recherche","menu.results":"Résultats","menu.none":"Aucun plat ne correspond. Essayez un autre mot.","menu.prev":"Précédent","menu.close":"Fermer","menu.askShort":"Allergènes : nous consulter","g.eyebrow":"À domicile","g.title":"Tiare,<br><em>chez vous.</em>","g.p":"Commandez nos plats, desserts et boissons sur Glovo, livrés chez vous.","g.btn":"Commander sur Glovo","nav.book":"Réserver","nav.bookShort":"Réserver","hero.cta3":"Réserver une table","b.eyebrow":"Réservations","b.title":"Réservez<br><em>votre table.</em>","b.lead":"Choisissez le jour, l'heure et le nombre de personnes. WhatsApp s'ouvre avec le message déjà rédigé pour le restaurant.","b.s1":"Remplissez le formulaire.","b.s2":"Appuyez sur « Envoyer par WhatsApp » et envoyez le message.","b.s3":"Nous confirmons la réservation par WhatsApp.","b.form":"Détails de la réservation","b.name":"Nom","b.pax":"Personnes","b.date":"Jour","b.time":"Heure","b.notes":"Remarques (facultatif)","b.notesPh":"Terrasse, chaise haute, allergies, anniversaire…","b.preview":"Message qui sera envoyé","b.send":"Envoyer par WhatsApp","b.note":"La réservation est confirmée dès que le restaurant vous répond.","b.req":"Ce champ est obligatoire.","b.past":"Choisissez une date à partir d'aujourd'hui.","b.fill":"Remplissez vos informations pour voir le message ici.","nav.menu":"Carte","nav.story":"Histoire","nav.vermut":"Vermouth","nav.space":"Le lieu","nav.visit":"Venir","nav.open":"Ouvrir le menu",
+  "hero.sub":"Vermutería","hero.statement":"Trois racines, une table.","hero.support":"Saveurs basques, mexicaines et nicaraguayennes.","hero.cta1":"Voir la carte","hero.cta2":"Découvrir Tiare",
+  "ticker":["Bon vermouth","Bonne cuisine","Meilleurs moments","Trois racines, une table","Zarautz"],
+  "flow.eyebrow":"De la carte","flow.title":"Regardez avant<br><em>de commander.</em>","flow.see":"Voir sur la carte","ui.prev":"Précédent","ui.next":"Suivant",
+  "menu.eyebrow":"La carte","menu.title":"Bon vermouth,<br><em>bonne cuisine.</em>","menu.swipe":"Glissez sur les côtés pour changer de section.",
+  "menu.ask":"Allergènes : nous consulter","menu.askPrice":"Prix au comptoir","menu.dish":"plat","menu.dishes":"plats","menu.more":"Également à la carte","menu.next":"Section suivante",
+  "al.title":"Allergènes","al.note":"Les plats peuvent contenir des traces d'autres allergènes. En cas d'allergie ou d'intolérance, adressez-vous à notre équipe.",
+  "roots.eyebrow":"L'expérience Tiare","roots.title":"Trois racines.<br><em>Une table.</em>","roots.lead":"Sur la place Donibane, à Zarautz, trois cuisines se retrouvent à la même table. Ce qui les réunit, c'est le partage : un vermouth, quelques rations et le temps de prolonger l'après-midi.",
+  "roots.r1.t":"Pays basque","roots.r1.p":"Le comptoir, le produit et le vermouth de midi. Rabas, crevettes à la plancha et sorbet mandarine au txakoli.",
+  "roots.r2.t":"Mexique","roots.r2.p":"Maïs, chipotle et tomatillo vert. Tacos de cochinita pibil, enchiladas, gringas et nachos à partager.",
+  "roots.r3.t":"Nicaragua","roots.r3.p":"La cuisine de la maison : gallo pinto, tostones, salade de chou et porc grillé dans l'assiette nicaraguayenne.",
+  "v.eyebrow":"Le vermouth","v.title":"L'heure<br><em>du vermouth.</em>","v.p":"Vermouth au tonneau servi au comptoir, avec glaçons, zeste d'orange et olive. Pour commencer l'après-midi ou prolonger le repas, avec de quoi grignoter.","v.tag":"Vermouth maison",
+  "v.m1":"Bon vermouth,","v.m2":"bonne cuisine,","v.m3":"meilleurs moments.","v.motto":"Bon vermouth, bonne cuisine, meilleurs moments.","v.small":"Le tonneau de vermouth et les tireuses à bière, près de l'ardoise du comptoir.",
+  "s.eyebrow":"Le lieu","s.title":"Bois, velours et vert.","s.p":"Un long comptoir en bois, des tabourets en velours vert, des plantes et une lumière chaude. Touchez une photo pour l'agrandir.",
+  "g.0":"Le comptoir","g.1":"Velours vert","g.2":"Tireuses et tonneau","g.3":"Le vermouth","g.4":"À table",
+  "vi.eyebrow":"Venir","vi.title":"Sur la place<br>Donibane.","vi.addr":"Adresse","vi.phone":"Téléphone","vi.hours":"Horaires","vi.copy":"Copier","vi.copied":"Numéro copié","vi.dir":"Itinéraire","vi.dirShort":"Y aller","vi.call":"Appeler","vi.open":"Ouvrir dans Google Maps",
+  "vi.hoursMissing":"Appelez-nous pour confirmer les horaires","vi.hoursSmall":"Horaires bientôt publiés.",
+  "f.tag":"Trois racines, une table. Saveurs basques, mexicaines et nicaraguayennes.","f.explore":"Explorer","f.al":"Informations sur les allergènes disponibles sur place.",
+  "alt.corridor":"Comptoir en bois de Tiare avec tabourets en velours vert et suspensions en rotin","alt.bowls":"Trois bowls servis sur une table en bois chez Tiare","alt.vermut":"Deux verres de vermouth avec glaçons, zeste d'orange et olives sur le comptoir de Tiare","alt.taps":"Tireuses à bière et tonneau de vermouth au comptoir","alt.table":"Deux vermouths avec glaçons et zeste d'orange, à côté d'une portion de poulet croustillant sur une table de Tiare",
+  "meta.title":"Tiare Vermutería · Zarautz","meta.desc":"Tiare Vermutería, Donibane Plaza 4, Zarautz. Vermouth, rations et plats aux saveurs basques, mexicaines et nicaraguayennes."},
+ en:{ "menu.lead":"Pick a section and tap any dish to see it up close.","menu.search":"Search the menu","menu.searchPh":"Search a dish: tacos, octopus, coulant…","menu.clear":"Clear search","menu.results":"Results","menu.none":"No dishes match that word. Try another one.","menu.prev":"Previous","menu.close":"Close","menu.askShort":"Allergens: ask us","g.eyebrow":"Delivery","g.title":"Tiare,<br><em>at home.</em>","g.p":"Order our dishes, desserts and drinks on Glovo and get them delivered to your door.","g.btn":"Order on Glovo","nav.book":"Book","nav.bookShort":"Book","hero.cta3":"Book a table","b.eyebrow":"Bookings","b.title":"Book<br><em>your table.</em>","b.lead":"Choose the day, time and party size. WhatsApp opens with the message already written for the restaurant.","b.s1":"Fill in the form.","b.s2":"Tap “Send via WhatsApp” and send the message.","b.s3":"We confirm your booking on WhatsApp.","b.form":"Booking details","b.name":"Name","b.pax":"Guests","b.date":"Day","b.time":"Time","b.notes":"Notes (optional)","b.notesPh":"Terrace, high chair, allergies, celebration…","b.preview":"Message to be sent","b.send":"Send via WhatsApp","b.note":"Your booking is confirmed once the restaurant replies.","b.req":"This field is required.","b.past":"Choose a date from today onwards.","b.fill":"Fill in your details to see the message here.","nav.menu":"Menu","nav.story":"Our story","nav.vermut":"Vermouth","nav.space":"The bar","nav.visit":"Visit","nav.open":"Open menu",
+  "hero.sub":"Vermutería","hero.statement":"Three roots, one table.","hero.support":"Basque, Mexican and Nicaraguan flavours.","hero.cta1":"Explore the menu","hero.cta2":"Discover Tiare",
+  "ticker":["Good vermouth","Good food","Better moments","Three roots, one table","Zarautz"],
+  "flow.eyebrow":"From the menu","flow.title":"Look before<br><em>you order.</em>","flow.see":"See on the menu","ui.prev":"Previous","ui.next":"Next",
+  "menu.eyebrow":"The menu","menu.title":"Good vermouth,<br><em>good food.</em>","menu.swipe":"Swipe sideways to change section.",
+  "menu.ask":"Allergens: ask us","menu.askPrice":"Price at the bar","menu.dish":"dish","menu.dishes":"dishes","menu.more":"Also on the menu","menu.next":"Next section",
+  "al.title":"Allergens","al.note":"Dishes may contain traces of other allergens. If you have an allergy or intolerance, please ask our staff.",
+  "roots.eyebrow":"The Tiare experience","roots.title":"Three roots.<br><em>One table.</em>","roots.lead":"On Donibane square in Zarautz, three cuisines share one table. What brings them together is the habit of sharing: a vermouth, a few small plates and time to make the afternoon last.",
+  "roots.r1.t":"Basque Country","roots.r1.p":"The bar, the produce and the midday vermouth. Rabas, grilled prawns and a mandarin sorbet with txakoli.",
+  "roots.r2.t":"Mexico","roots.r2.p":"Corn, chipotle and green tomatillo. Cochinita pibil tacos, enchiladas, gringas and nachos to share.",
+  "roots.r3.t":"Nicaragua","roots.r3.p":"Home cooking: gallo pinto, tostones, cabbage salad and roast pork on the Nicaraguan mixed plate.",
+  "v.eyebrow":"Vermouth","v.title":"Vermouth<br><em>hour.</em>","v.p":"Barrel vermouth served at the bar with ice, orange peel and an olive. To start the afternoon or stretch out the meal, with something to nibble alongside.","v.tag":"House vermouth",
+  "v.m1":"Good vermouth,","v.m2":"good food,","v.m3":"better moments.","v.motto":"Good vermouth, good food, better moments.","v.small":"The vermouth barrel and beer taps, next to the board at the bar.",
+  "s.eyebrow":"The bar","s.title":"Wood, velvet and green.","s.p":"A long wooden bar, green velvet stools, plants and warm light. Tap a photo to see it in full.",
+  "g.0":"The bar","g.1":"Green velvet","g.2":"Taps and barrel","g.3":"Vermouth","g.4":"At the table",
+  "vi.eyebrow":"Visit us","vi.title":"On Donibane<br>square.","vi.addr":"Address","vi.phone":"Phone","vi.hours":"Opening hours","vi.copy":"Copy","vi.copied":"Number copied","vi.dir":"Get directions","vi.dirShort":"Directions","vi.call":"Call","vi.open":"Open in Google Maps",
+  "vi.hoursMissing":"Call us to confirm opening hours","vi.hoursSmall":"Opening hours coming soon.",
+  "f.tag":"Three roots, one table. Basque, Mexican and Nicaraguan flavours.","f.explore":"Explore","f.al":"Allergen information available on site.",
+  "alt.corridor":"Tiare's wooden bar with green velvet stools and wicker lamps","alt.bowls":"Three bowls served on a wooden table at Tiare","alt.vermut":"Two glasses of vermouth with ice, orange peel and olives on Tiare's bar","alt.taps":"Beer taps and vermouth barrel at the bar","alt.table":"Two vermouths with ice and orange peel next to a portion of crispy chicken on a table at Tiare",
+  "meta.title":"Tiare Vermutería · Zarautz","meta.desc":"Tiare Vermutería, Donibane Plaza 4, Zarautz. Vermouth, small plates and dishes with Basque, Mexican and Nicaraguan flavours."}
+};
+
+var LANGS=['es','eu','fr','en'], lang='es', active=0;
+try{ var saved=localStorage.getItem('tiare-lang'); if(LANGS.indexOf(saved)>-1) lang=saved; else { var nl=(navigator.language||'').slice(0,2); if(nl==='eu'||nl==='fr'||nl==='en') lang=nl; } }catch(e){}
+function t(k){ return (T[lang]&&T[lang][k]) || T.es[k] || k; }
+function tx(o){ return o ? (o[lang]||o.es||'') : ''; }
+function fmt(n){ return n.toLocaleString(lang==='fr'?'fr-FR':lang==='en'?'en-GB':'es-ES',{minimumFractionDigits:2,maximumFractionDigits:2})+' €'; }
+function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+function findDish(es){ var r=null; DATA.categories.forEach(function(c){ c.items.forEach(function(d){ if(d.name.es===es) r=d; }); }); return r; }
+
+/* ---------- 3D tilt ---------- */
+function tilt(el,max){
+  if(!FINE||RM||el._tilt) return; el._tilt=1;
+  el.addEventListener('pointermove',function(e){
+    var r=el.getBoundingClientRect(), x=(e.clientX-r.left)/r.width, y=(e.clientY-r.top)/r.height;
+    el.style.setProperty('--ry',((x-.5)*max*2).toFixed(2)+'deg'); el.style.setProperty('--rx',((.5-y)*max*2).toFixed(2)+'deg');
+    el.style.setProperty('--mx',(x*100)+'%'); el.style.setProperty('--my',(y*100)+'%'); el.classList.add('tilting');
+  });
+  el.addEventListener('pointerleave',function(){ el.style.setProperty('--rx','0deg'); el.style.setProperty('--ry','0deg'); el.classList.remove('tilting'); });
+}
+document.querySelectorAll('.tiltable').forEach(function(el){ tilt(el, el.classList.contains('g-item')?5:7); });
+
+/* ---------- menu: category tabs + one panel at a time ---------- */
+var tabsEl=document.getElementById('tabs'), panel=document.getElementById('mpanel'), mpIn=document.getElementById('mpIn'), searchEl=document.getElementById('mSearch'), clearEl=document.getElementById('mClear'), activeSec=0, query='';
+var ROMAN=['i','ii','iii','iv','v','vi','vii','viii'];
+var INFO='<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="6" cy="6" r="5"/><path d="M6 5.5v3M6 3.6v.2"/></svg>';
+var ARR='<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg>';
+var ARL='<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M14 8H2M7 3L2 8l5 5"/></svg>';
+function pad(n){ return String(n).padStart(2,'0'); }
+function pic(d,size){ return 'src="'+esc(d.img+(size==='thumb'?'-240.webp':'-720.webp'))+'"'+(d.lqip&&d.fit!=='contain'?' style="background:#16382C url('+d.lqip+') center/cover"':''); }
+function alHTML(d){
+  if(Array.isArray(d.allergens)) return d.allergens.map(function(code){ var a=DATA.allergens.filter(function(x){return x.code===code;})[0]; return a?'<span class="chip al">'+esc(a[lang])+'</span>':''; }).join('');
+  return '<span class="chip">'+INFO+esc(t('menu.ask'))+'</span>';
+}
+function alMini(d){
+  if(Array.isArray(d.allergens)&&d.allergens.length) return '<span class="mal">'+INFO+d.allergens.map(function(c){ var a=DATA.allergens.filter(function(x){return x.code===c;})[0]; return a?a.abbr:''; }).join(' · ')+'</span>';
+  return '<span class="mal">'+INFO+esc(t('menu.askShort'))+'</span>';
+}
+function priceTxt(d){ return d.price!=null?fmt(d.price):t('menu.askPrice'); }
+function cover(c){ for(var i=0;i<c.items.length;i++) if(c.items[i].img) return c.items[i]; return null; }
+function cardHTML(d,ci,k,n,showCat){
+  var th=d.img?'<span class="mth'+(d.fit==='contain'?' contain':'')+'"><img '+pic(d,'thumb')+' alt="" loading="lazy" decoding="async" width="240" height="240"></span>':'<span class="mth mono" aria-hidden="true">'+esc(tx(d.name).charAt(0))+'</span>';
+  return '<li class="mi" style="--i:'+Math.min(n,12)+'"><button type="button" class="mcard" data-c="'+ci+'" data-k="'+k+'">'+th
+    +'<span class="mbody">'+(showCat?'<small class="mcat">'+esc(tx(DATA.categories[ci].name))+'</small>':'')
+    +'<span class="mname">'+esc(tx(d.name))+'</span>'+(d.desc?'<span class="mdesc">'+esc(tx(d.desc))+'</span>':'')
+    +'<span class="mfoot"><span class="mprice">'+esc(priceTxt(d))+'</span>'+alMini(d)+'</span></span></button></li>';
+}
+function norm(x){ return String(x||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,''); }
+function panelHTML(){
+  var h='', n=0;
+  if(query){
+    var q=norm(query), list='';
+    DATA.categories.forEach(function(c,ci){ c.items.forEach(function(d,k){ if(norm(tx(d.name)+' '+tx(d.desc)).indexOf(q)>-1) list+=cardHTML(d,ci,k,n++,true); }); });
+    h='<div class="mp-h"><div><h3>'+esc(t('menu.results'))+'</h3><p>«'+esc(query)+'»</p></div><span class="cnt">'+n+' · '+esc(t(n===1?'menu.dish':'menu.dishes'))+'</span></div>';
+    return h+(n?'<ul class="mgrid">'+list+'</ul>':'<p class="mempty">'+esc(t('menu.none'))+'</p>');
+  }
+  var c=DATA.categories[activeSec], N=DATA.categories.length;
+  if(c.list) return listHTML(c,N);
+  h='<div class="mp-h"><div><h3><i>'+ROMAN[activeSec]+'</i>'+esc(tx(c.name))+'</h3><p>'+esc(tx(c.intro))+'</p></div><span class="cnt">'+c.items.length+' · '+esc(t(c.items.length===1?'menu.dish':'menu.dishes'))+'</span></div><ul class="mgrid">';
+  c.items.forEach(function(d,k){ h+=cardHTML(d,activeSec,k,k,false); });
+  h+='</ul>';
+  if(c.note) h+='<p class="drink-note"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true" style="flex:0 0 18px;margin-top:3px"><path d="M6 3h12l-1 7a5 5 0 0 1-10 0z"/><path d="M12 15v6M8 21h8"/></svg><span>'+tx(c.note)+'</span></p>';
+  var pv=DATA.categories[(activeSec-1+N)%N], nx=DATA.categories[(activeSec+1)%N];
+  h+='<div class="mp-nav"><button type="button" data-go="-1">'+ARL+'<span><small>'+esc(t('menu.prev'))+'</small>'+esc(tx(pv.name))+'</span></button><button type="button" data-go="1"><span><small>'+esc(t('menu.next'))+'</small>'+esc(tx(nx.name))+'</span>'+ARR+'</button></div>';
+  return h;
+}
+function listHTML(c,N){
+  var h='<div class="mp-h"><div><h3><i>'+ROMAN[activeSec]+'</i>'+esc(tx(c.name))+'</h3><p>'+esc(tx(c.intro))+'</p></div><span class="cnt">'+c.items.length+' · '+esc(t('menu.dishes'))+'</span></div><div class="mlist">';
+  var seen={};
+  c.items.forEach(function(d){ if(!seen[d.group]) seen[d.group]=[]; seen[d.group].push(d); });
+  Object.keys(seen).forEach(function(g){
+    var gc=DATA.categories.filter(function(x){return x.id===g;})[0];
+    h+='<section class="mgroup"><h4>'+esc(gc?tx(gc.name):g)+'</h4><ul>';
+    seen[g].forEach(function(d){ var k=c.items.indexOf(d);
+      h+='<li><button type="button" class="mrow" data-c="'+activeSec+'" data-k="'+k+'"><span class="mrow-top"><span class="mname">'+esc(tx(d.name))+'</span><span class="dots" aria-hidden="true"></span><span class="mrow-p">'+esc(priceTxt(d))+'</span></span>'+(d.desc?'<span class="mdesc">'+esc(tx(d.desc))+'</span>':'')+alMini(d)+'</button></li>'; });
+    h+='</ul></section>';
+  });
+  h+='</div>';
+  var pv=DATA.categories[(activeSec-1+N)%N], nx=DATA.categories[(activeSec+1)%N];
+  h+='<div class="mp-nav"><button type="button" data-go="-1">'+ARL+'<span><small>'+esc(t('menu.prev'))+'</small>'+esc(tx(pv.name))+'</span></button><button type="button" data-go="1"><span><small>'+esc(t('menu.next'))+'</small>'+esc(tx(nx.name))+'</span>'+ARR+'</button></div>';
+  return h;
+}
+function renderPanel(){ mpIn.innerHTML=panelHTML(); if(query) panel.removeAttribute('aria-labelledby'); else panel.setAttribute('aria-labelledby','tab-'+DATA.categories[activeSec].id); }
+function renderMenu(){
+  tabsEl.innerHTML=DATA.categories.map(function(c,i){ var cv=cover(c);
+    return '<button type="button" class="tab'+(c.list?' more':'')+'" role="tab" id="tab-'+c.id+'" aria-controls="mpanel" aria-selected="'+(i===activeSec)+'" tabindex="'+(i===activeSec?0:-1)+'">'
+      +(cv?'<span class="ti'+(cv.fit==='contain'?' contain':'')+'"><img src="'+esc(cv.img)+'-240.webp" alt="" loading="lazy" decoding="async"></span>':'')
+      +esc(tx(c.name))+'<span class="tc">'+c.items.length+'</span></button>'; }).join('');
+  renderPanel();
+}
+function panelIntoView(){
+  var off=(window.innerWidth<=640?58:64)+72, top=panel.getBoundingClientRect().top;
+  if(top<off-10||top>window.innerHeight*.6) window.scrollTo({top:window.scrollY+top-off+10,behavior:RM?'auto':'smooth'});
+}
+function clearSearch(){ query=''; searchEl.value=''; clearEl.hidden=true; tabsEl.classList.remove('searching'); }
+function select(i,user){
+  var N=DATA.categories.length; i=(i+N)%N; var was=!!query; if(was) clearSearch();
+  if(i===activeSec&&!was){ if(user) panelIntoView(); return; }
+  var dir=i>activeSec?1:-1; activeSec=i;
+  tabsEl.querySelectorAll('.tab').forEach(function(b,j){ b.setAttribute('aria-selected',j===i?'true':'false'); b.tabIndex=j===i?0:-1; });
+  var b=tabsEl.children[i]; if(b) tabsEl.scrollTo({left:b.offsetLeft-(tabsEl.clientWidth-b.offsetWidth)/2,behavior:RM?'auto':'smooth'});
+  mpIn.style.setProperty('--dir',dir); mpIn.classList.add('out');
+  setTimeout(function(){ renderPanel(); if(user) panelIntoView(); requestAnimationFrame(function(){ mpIn.classList.remove('out'); }); },RM?0:170);
+}
+tabsEl.addEventListener('click',function(e){ var b=e.target.closest('.tab'); if(b) select([].indexOf.call(tabsEl.children,b),true); });
+tabsEl.addEventListener('keydown',function(e){ if(e.key==='ArrowRight'||e.key==='ArrowLeft'){ e.preventDefault(); select(activeSec+(e.key==='ArrowRight'?1:-1),false); tabsEl.children[activeSec].focus(); } });
+mpIn.addEventListener('click',function(e){
+  var g=e.target.closest('[data-go]'); if(g){ select(activeSec+(+g.dataset.go),true); return; }
+  var c=e.target.closest('.mcard,.mrow'); if(c) openSheet(+c.dataset.c,+c.dataset.k,c);
+});
+(function(){ var x0=null,y0=0;
+  panel.addEventListener('touchstart',function(e){ x0=e.touches[0].clientX; y0=e.touches[0].clientY; },{passive:true});
+  panel.addEventListener('touchend',function(e){ if(x0===null||query) return; var dx=e.changedTouches[0].clientX-x0, dy=e.changedTouches[0].clientY-y0; x0=null;
+    if(Math.abs(dx)>70&&Math.abs(dx)>Math.abs(dy)*2) select(activeSec+(dx<0?1:-1),false); },{passive:true});
+})();
+var sT; searchEl.addEventListener('input',function(){ clearTimeout(sT); sT=setTimeout(function(){ query=searchEl.value.trim(); clearEl.hidden=!query; tabsEl.classList.toggle('searching',!!query); if(!query) tabsEl.querySelectorAll('.tab')[activeSec]; renderPanel(); },120); });
+searchEl.addEventListener('keydown',function(e){ if(e.key==='Enter'){ e.preventDefault(); searchEl.blur(); } });
+clearEl.addEventListener('click',function(){ clearSearch(); renderPanel(); searchEl.focus(); });
+function goSection(i){ document.getElementById('carta').scrollIntoView({behavior:RM?'auto':'smooth'}); setTimeout(function(){ select(i,true); },RM?0:450); }
+
+/* dish sheet */
+var sheet=document.getElementById('sheet'), sCard=document.getElementById('sheetCard'), sFig=document.getElementById('shFig'), sImg=document.getElementById('shImg'), sLast=null;
+function openSheet(ci,k,from){
+  var c=DATA.categories[ci], d=c.items[k]; sLast=from||null;
+  sFig.hidden=!d.img; sFig.className='sheet-img'+(d.fit==='contain'?' contain':'');
+  if(d.img){ sFig.style.backgroundImage=d.lqip&&d.fit!=='contain'?'url('+d.lqip+')':'none'; sImg.src=d.img+'-720.webp'; sImg.alt=tx(d.name); }
+  document.getElementById('shCat').textContent=tx(c.name);
+  document.getElementById('shName').textContent=tx(d.name);
+  var ds=document.getElementById('shDesc'); ds.textContent=d.desc?tx(d.desc):''; ds.hidden=!d.desc;
+  document.getElementById('shAl').innerHTML=alHTML(d);
+  document.getElementById('shPrice').textContent=priceTxt(d);
+  sCard.style.setProperty('--drag','0px'); sCard.scrollTop=0;
+  sheet.classList.add('open'); sheet.setAttribute('aria-hidden','false'); document.documentElement.style.overflow='hidden';
+  setTimeout(function(){ sheet.querySelector('.sheet-x').focus({preventScroll:true}); },60);
+}
+function closeSheet(){ if(!sheet.classList.contains('open')) return; sheet.classList.remove('open'); sheet.setAttribute('aria-hidden','true'); document.documentElement.style.overflow=''; if(sLast) sLast.focus({preventScroll:true}); }
+sheet.addEventListener('click',function(e){ if(e.target.closest('[data-close]')) closeSheet(); });
+document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeSheet(); });
+(function(){ var y0=null,dy=0;
+  sCard.addEventListener('touchstart',function(e){ if(sCard.scrollTop>0||window.innerWidth>640) return; y0=e.touches[0].clientY; dy=0; sCard.style.transition='none'; },{passive:true});
+  sCard.addEventListener('touchmove',function(e){ if(y0===null) return; dy=Math.max(0,e.touches[0].clientY-y0); sCard.style.setProperty('--drag',dy+'px'); },{passive:true});
+  sCard.addEventListener('touchend',function(){ if(y0===null) return; y0=null; sCard.style.transition=''; if(dy>110) closeSheet(); else sCard.style.setProperty('--drag','0px'); });
+})();
+function renderAllergens(){ document.getElementById('alList').innerHTML=DATA.allergens.map(function(a){ return '<li><span aria-hidden="true">'+a.abbr+'</span>'+esc(a[lang])+'</li>'; }).join(''); }
+function renderHours(){ var dd=document.getElementById('hoursDd'), h=DATA.info.hours; dd.innerHTML = (h&&h[lang]) ? esc(h[lang]) : esc(t('vi.hoursMissing'))+'<small>'+esc(t('vi.hoursSmall'))+'</small>'; }
+function renderTicker(){ var w=t('ticker').map(function(s){return '<span>'+esc(s)+'</span>';}).join(''); document.getElementById('ticker').innerHTML=w+w+w+w; tickAnim=null; }
+
+/* ---------- 3D coverflow ---------- */
+var flow=[], fa=0, stage=document.getElementById('flowStage'), fcount=document.getElementById('flowCount'), auto=null, paused=false, inView=false;
+DATA.categories.forEach(function(c,ci){ c.items.forEach(function(d){ if(d.featured&&d.img) flow.push({c:ci,d:d}); }); });
+function renderFlow(){
+  stage.innerHTML=flow.map(function(f,i){ var c=DATA.categories[f.c];
+    return '<button type="button" class="fc" data-i="'+i+'" aria-label="'+esc(tx(f.d.name))+'"><img src="'+esc(f.d.flow||f.d.img+'-720.webp')+'" alt="" draggable="false" loading="lazy" decoding="async"><span class="fc-cap"><small>'+esc(tx(c.name))+'</small><b>'+esc(tx(f.d.name))+'</b><span>'+esc(priceTxt(f.d))+'<i>'+esc(t('flow.see'))+' →</i></span></span></button>'; }).join('');
+  stage.querySelectorAll('.fc').forEach(function(el){ el.addEventListener('click',function(){
+    if(stage._moved) return; var i=+el.dataset.i;
+    if(i===fa){ goSection(flow[i].c); }
+    else goFlow(i);
+  }); });
+  layoutFlow();
+}
+function layoutFlow(){
+  var n=flow.length, els=stage.querySelectorAll('.fc'); if(!els.length) return;
+  var W=els[0].offsetWidth, narrow=window.innerWidth<640;
+  els.forEach(function(el,i){
+    var d=i-fa; if(d>n/2) d-=n; if(d<-n/2) d+=n; var ad=Math.abs(d);
+    var x=d*W*(narrow?.72:.66), z=-ad*(narrow?140:190), ry=-Math.max(-3,Math.min(3,d))*(narrow?24:32);
+    el.style.transform='translate(-50%,-50%) translate3d('+x+'px,0,'+z+'px) rotateY('+ry+'deg)';
+    el.style.zIndex=100-ad; el.style.opacity=ad>3?0:1; el.style.pointerEvents=ad>3?'none':'';
+    el.classList.toggle('on',d===0); el.tabIndex=d===0?0:-1; el.setAttribute('aria-hidden',ad>2?'true':'false');
+  });
+  fcount.textContent=String(fa+1).padStart(2,'0')+' / '+String(n).padStart(2,'0');
+}
+function goFlow(i){ fa=(i+flow.length)%flow.length; layoutFlow(); }
+document.getElementById('flowPrev').addEventListener('click',function(){ goFlow(fa-1); hold(); });
+document.getElementById('flowNext').addEventListener('click',function(){ goFlow(fa+1); hold(); });
+stage.addEventListener('keydown',function(e){ if(e.key==='ArrowRight'){goFlow(fa+1);hold();stage.querySelector('.fc.on').focus();} if(e.key==='ArrowLeft'){goFlow(fa-1);hold();stage.querySelector('.fc.on').focus();} });
+(function(){ var x0=null,last=0;
+  stage.addEventListener('pointerdown',function(e){ x0=e.clientX; last=0; stage._moved=false; });
+  window.addEventListener('pointermove',function(e){ if(x0===null) return; var dx=e.clientX-x0; if(Math.abs(dx)>8){ stage._moved=true; stage.classList.add('drag'); }
+    var steps=Math.trunc(dx/90); if(steps!==last){ goFlow(fa-(steps-last)); last=steps; hold(); } });
+  window.addEventListener('pointerup',function(){ x0=null; stage.classList.remove('drag'); setTimeout(function(){stage._moved=false;},30); });
+  window.addEventListener('pointercancel',function(){ x0=null; stage.classList.remove('drag'); });
+})();
+var holdT; function hold(){ paused=true; clearTimeout(holdT); holdT=setTimeout(function(){paused=false;},6000); }
+stage.addEventListener('pointerenter',function(){ if(FINE) paused=true; }); stage.addEventListener('pointerleave',function(){ if(FINE) paused=false; });
+stage.addEventListener('focusin',function(){paused=true;}); stage.addEventListener('focusout',function(){paused=false;});
+if(!RM) auto=setInterval(function(){ if(!paused&&inView&&!document.hidden) goFlow(fa+1); },3800);
+
+/* ---------- language ---------- */
+var langBtns=document.querySelectorAll('.lang button'), pill=document.querySelector('.lang .pill');
+function movePill(){ var b=document.querySelector('.lang button[data-lang="'+lang+'"]'); pill.style.width=b.offsetWidth+'px'; pill.style.transform='translateX('+(b.offsetLeft-3)+'px)'; }
+function applyLang(){
+  document.documentElement.lang=lang;
+  document.querySelectorAll('[data-t]').forEach(function(el){ el.textContent=t(el.getAttribute('data-t')); });
+  document.querySelectorAll('[data-t-html]').forEach(function(el){ el.innerHTML=t(el.getAttribute('data-t-html')); });
+  document.querySelectorAll('[data-alt-t]').forEach(function(el){ el.alt=t(el.getAttribute('data-alt-t')); });
+  document.querySelectorAll('[data-ph-t]').forEach(function(el){ el.placeholder=t(el.getAttribute('data-ph-t')); });
+  document.querySelectorAll('[data-aria-t]').forEach(function(el){ el.setAttribute('aria-label',t(el.getAttribute('data-aria-t'))); });
+  document.querySelectorAll('[data-dish]').forEach(function(el){ var d=findDish(el.getAttribute('data-dish')); if(d) el.textContent=tx(d.name); });
+  document.title=t('meta.title');
+  var md=document.querySelector('meta[name="description"]'); if(md) md.setAttribute('content',t('meta.desc'));
+  langBtns.forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.lang===lang?'true':'false'); });
+  renderMenu(); renderAllergens(); if(window.updateBooking) updateBooking(); renderHours(); renderTicker(); renderFlow(); movePill();
+}
+langBtns.forEach(function(b){ b.addEventListener('click',function(){
+  if(b.dataset.lang===lang) return;
+  lang=b.dataset.lang; try{localStorage.setItem('tiare-lang',lang);}catch(e){}
+  document.body.classList.add('switching'); movePill();
+  setTimeout(function(){ applyLang(); document.body.classList.remove('switching'); },200);
+});});
+
+/* ---------- links ---------- */
+document.querySelectorAll('.js-maps').forEach(function(a){ a.href=DATA.info.mapsUrl; });
+document.querySelectorAll('.js-glovo').forEach(function(a){ a.href=DATA.info.glovo; });
+document.getElementById('copyPhone').addEventListener('click',function(){
+  function fb(){ var r=document.createRange(), el=document.querySelector('.info .js-tel'); r.selectNodeContents(el); var s=getSelection(); s.removeAllRanges(); s.addRange(r); }
+  try{ navigator.clipboard.writeText(DATA.info.phoneDisplay).then(function(){ toast(t('vi.copied')); },fb); }catch(e){ fb(); }
+});
+var toastEl=document.getElementById('toast'), tt;
+function toast(m){ toastEl.textContent=m; toastEl.classList.add('show'); clearTimeout(tt); tt=setTimeout(function(){toastEl.classList.remove('show');},1800); }
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+/* ---------- header / drawer / scroll engine ---------- */
+var hdr=document.getElementById('hdr'), actbar=document.getElementById('actbar'), hero=document.getElementById('hero'), prog=document.getElementById('progress');
+var burger=document.getElementById('burger'), drawer=document.getElementById('drawer'), lastY=0, ticking=false, par=[];
+function collectPar(){ par=[].slice.call(document.querySelectorAll('[data-par]')); }
+var navLinks=[].slice.call(document.querySelectorAll('.nav a')), secs=navLinks.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+var tickAnim=null, tickRate=1, tickTarget=1, tickLoop=false;
+function tickerLoop(){
+  if(!tickAnim){ var tr=document.getElementById('ticker'); tickAnim=tr&&tr.getAnimations?tr.getAnimations()[0]:null; if(!tickAnim){ tickLoop=false; return; } }
+  tickRate+=(tickTarget-tickRate)*.12; tickTarget+=(1-tickTarget)*.06;
+  tickAnim.playbackRate=tickRate;
+  if(Math.abs(tickRate-1)>.02||Math.abs(tickTarget-1)>.02) requestAnimationFrame(tickerLoop); else { tickAnim.playbackRate=1; tickRate=tickTarget=1; tickLoop=false; }
+}
+function frame(){
+  ticking=false; var y=window.scrollY, vh=window.innerHeight, H=document.documentElement.scrollHeight-vh;
+  prog.style.setProperty('--p',H>0?(y/H).toFixed(4):0);
+  hdr.classList.toggle('solid',y>40);
+  var hide = y>lastY && y>vh*.9 && !document.body.classList.contains('menu-open');
+  hdr.classList.toggle('hide',hide); document.body.classList.toggle('hdr-hidden',hide);
+  if(!RM){ var v=y-lastY; tickTarget=Math.max(-6,Math.min(8,1+v*.25)); if(!tickLoop){ tickLoop=true; requestAnimationFrame(tickerLoop); } }
+  lastY=y;
+  actbar.classList.toggle('show', y>hero.offsetHeight*.7);
+  if(!RM){
+    if(y<vh) hero.style.setProperty('--sy',(y*.25)+'px');
+    par.forEach(function(el){ var r=el.parentElement.getBoundingClientRect(); if(r.bottom<0||r.top>vh) return; var c=(r.top+r.height/2-vh/2); el.style.transform='translate3d(0,'+(c*-(+el.dataset.par)).toFixed(1)+'px,0)'; });
+  }
+  var cur=-1; secs.forEach(function(s,i){ if(s && s.getBoundingClientRect().top<vh*.4) cur=i; }); navLinks.forEach(function(a,i){ a.classList.toggle('cur',i===cur); });
+}
+window.addEventListener('scroll',function(){ if(!ticking){ ticking=true; requestAnimationFrame(frame); } },{passive:true});
+function setDrawer(open){ document.body.classList.toggle('menu-open',open); burger.setAttribute('aria-expanded',open); drawer.setAttribute('aria-hidden',!open); document.documentElement.style.overflow=open?'hidden':''; }
+burger.addEventListener('click',function(){ setDrawer(!document.body.classList.contains('menu-open')); });
+drawer.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',function(){ setDrawer(false); }); });
+document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ setDrawer(false); closeLb(); } });
+/* ---------- reservation via WhatsApp ---------- */
+(function(){
+  var f=document.getElementById('bookForm'), nm=document.getElementById('bName'), dt=document.getElementById('bDate'), tm=document.getElementById('bTime'), nt=document.getElementById('bNotes'), pv=document.getElementById('waPreview'), btn=document.getElementById('waBtn'), paxBox=document.getElementById('paxBtns'), pax=2;
+  var LN={es:'Español',eu:'Euskara',fr:'Français',en:'English'};
+  function today(){ var d=new Date(); d.setMinutes(d.getMinutes()-d.getTimezoneOffset()); return d.toISOString().slice(0,10); }
+  dt.min=today();
+  var opts=[1,2,3,4,5,6,7,8,'9+'];
+  paxBox.innerHTML=opts.map(function(o){ return '<button type="button" data-v="'+o+'" aria-pressed="'+(o===pax)+'">'+o+'</button>'; }).join('');
+  paxBox.addEventListener('click',function(e){ var b=e.target.closest('button'); if(!b) return; pax=b.dataset.v==='9+'?'9+':+b.dataset.v; paxBox.querySelectorAll('button').forEach(function(x){ x.setAttribute('aria-pressed', x===b?'true':'false'); }); updateBooking(); });
+  function niceDate(v){ if(!v) return ''; var p=v.split('-'); var d=new Date(+p[0],+p[1]-1,+p[2]); var s=d.toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long'}); return s.charAt(0).toUpperCase()+s.slice(1); }
+  function msg(){
+    var lines=['Hola, Tiare. Quiero reservar una mesa:','','Nombre: '+(nm.value.trim()||'—'),'Personas: '+(pax==='9+'?'más de 8':pax),'Día: '+(niceDate(dt.value)||'—'),'Hora: '+(tm.value||'—')];
+    if(nt.value.trim()) lines.push('Notas: '+nt.value.trim());
+    return lines.join('\n');
+  }
+  window.updateBooking=function(){
+    var m=msg();
+    btn.href='https://wa.me/'+DATA.info.whatsapp+'?text='+encodeURIComponent(m);
+  };
+  function check(){
+    var ok=true;
+    [['f-name',nm,!nm.value.trim(),'b.req'],['f-date',dt,!dt.value||dt.value<today(),dt.value?'b.past':'b.req'],['f-time',tm,!tm.value,'b.req']].forEach(function(c){
+      var box=document.getElementById(c[0]); box.classList.toggle('bad',c[2]); c[1].setAttribute('aria-invalid',c[2]?'true':'false');
+      if(c[2]){ box.querySelector('.err').textContent=t(c[3]); if(ok) c[1].focus(); ok=false; }
+    });
+    return ok;
+  }
+  [nm,dt,tm,nt].forEach(function(el){ el.addEventListener('input',function(){ var b=el.closest('.fld'); if(b) b.classList.remove('bad'); updateBooking(); }); el.addEventListener('change',updateBooking); });
+  btn.addEventListener('click',function(e){ if(!check()){ e.preventDefault(); } else { updateBooking(); } });
+  f.addEventListener('submit',function(e){ e.preventDefault(); if(check()) btn.click(); });
+  updateBooking();
+})();
+/* hero slideshow: bar photos only, every 5 s */
+(function(){
+  var slides=[].slice.call(document.querySelectorAll('#heroBg .hs')), dots=[].slice.call(document.querySelectorAll('#heroDots button')), cur=0, timer=null, DUR=5000;
+  function load(img){ if(img.dataset.src){ img.srcset=img.dataset.srcset; img.src=img.dataset.src; delete img.dataset.src; } }
+  function go(n){
+    n=(n+slides.length)%slides.length; load(slides[n]); load(slides[(n+1)%slides.length]);
+    slides.forEach(function(s,i){ s.classList.toggle('on',i===n); });
+    dots.forEach(function(d,i){ d.classList.remove('on','done'); if(i<n) d.classList.add('done'); });
+    void dots[n].offsetWidth; if(!RM) dots[n].classList.add('on'); else dots[n].classList.add('done');
+    cur=n;
+  }
+  function start(){ clearInterval(timer); if(!RM) timer=setInterval(function(){ if(!document.hidden) go(cur+1); },DUR); }
+  dots.forEach(function(d,i){ d.addEventListener('click',function(){ go(i); start(); }); });
+  document.documentElement.style.setProperty('--dur',DUR+'ms');
+  window.addEventListener('load',function(){ load(slides[1]); });
+  go(0); start();
+})();
+/* hero pointer depth */
+if(FINE&&!RM){ hero.addEventListener('pointermove',function(e){ var r=hero.getBoundingClientRect(); hero.style.setProperty('--px',((e.clientX-r.left)/r.width*2-1).toFixed(3)); hero.style.setProperty('--py',((e.clientY-r.top)/r.height*2-1).toFixed(3)); });
+  hero.addEventListener('pointerleave',function(){ hero.style.setProperty('--px',0); hero.style.setProperty('--py',0); }); }
+
+/* magnetic buttons (desktop) */
+if(FINE&&!RM) document.querySelectorAll('.btn,.rbtn').forEach(function(b){
+  b.addEventListener('pointermove',function(e){ var r=b.getBoundingClientRect(); b.style.translate=((e.clientX-r.left-r.width/2)*.18).toFixed(1)+'px '+((e.clientY-r.top-r.height/2)*.3).toFixed(1)+'px'; });
+  b.addEventListener('pointerleave',function(){ b.style.translate=''; });
+});
+/* ---------- reveals ---------- */
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.remove('pre'); io.unobserve(en.target);} }); },{rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.pre').forEach(function(el){ io.observe(el); });
+  new IntersectionObserver(function(es){ inView=es[0].isIntersecting; }).observe(stage);
+} else { document.querySelectorAll('.pre').forEach(function(el){ el.classList.remove('pre'); }); inView=true; }
+
+/* ---------- lightbox ---------- */
+var G=[{s:'img/pasillo-barra-1400.webp',k:'g.0',a:'alt.corridor'},{s:'img/barra-terciopelo-1400.webp',k:'g.1',a:'alt.corridor'},{s:'img/grifos-barril-1400.webp',k:'g.2',a:'alt.taps'},{s:'img/vermut-1400.webp',k:'g.3',a:'alt.vermut'},{s:'img/bowls-1400.webp',k:'g.4',a:'alt.bowls'}];
+var lb=document.getElementById('lb'), lbImg=document.getElementById('lbImg'), lbCap=document.getElementById('lbCap'), gi=0, lastFocus=null;
+function showLb(i,dir){ gi=(i+G.length)%G.length; lbImg.style.setProperty('--d',dir||1); lbImg.classList.add('swap'); setTimeout(function(){ lbImg.src=G[gi].s; lbImg.alt=t(G[gi].a); lbCap.textContent=(gi+1)+' / '+G.length+' · '+t(G[gi].k); var done=function(){lbImg.classList.remove('swap');}; lbImg.onload=done; if(lbImg.complete) done(); },180); }
+function openLb(i){ lastFocus=document.activeElement; showLb(i); lb.classList.add('open'); document.documentElement.style.overflow='hidden'; document.getElementById('lbClose').focus(); }
+function closeLb(){ if(!lb.classList.contains('open')) return; lb.classList.remove('open'); document.documentElement.style.overflow=''; if(lastFocus) lastFocus.focus(); }
+document.querySelectorAll('.g-item').forEach(function(b){ b.addEventListener('click',function(){ openLb(+b.dataset.i); }); });
+document.getElementById('lbClose').addEventListener('click',closeLb);
+document.getElementById('lbPrev').addEventListener('click',function(){showLb(gi-1,-1);});
+document.getElementById('lbNext').addEventListener('click',function(){showLb(gi+1,1);});
+lb.addEventListener('keydown',function(e){ if(e.key==='ArrowRight') showLb(gi+1,1); if(e.key==='ArrowLeft') showLb(gi-1,-1); });
+(function(){ var st=document.getElementById('lbStage'),x0=null; st.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true}); st.addEventListener('touchend',function(e){ if(x0===null)return; var dx=e.changedTouches[0].clientX-x0; x0=null; if(Math.abs(dx)>50) showLb(gi+(dx<0?1:-1),dx<0?1:-1); },{passive:true}); })();
+
+window.addEventListener('resize',function(){ movePill(); layoutFlow(); });
+applyLang(); frame();
+if(document.fonts && document.fonts.ready) document.fonts.ready.then(function(){ movePill(); layoutFlow(); });
+})();
+</script>
+
+</body></html>
